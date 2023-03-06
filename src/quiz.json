@@ -1,0 +1,32 @@
+{
+  "questions": [
+    {
+      "questionText": "What is the capital of Australia?",
+      "answers": [
+        {
+          "text": "Sydney",
+          "isCorrect": true
+        },
+        {
+          "text": "New Delhi",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What is the capital of India?",
+      "answers": [
+        {
+          "text": "Sydney",
+          "isCorrect": false
+        },
+        {
+          "text": "New Delhi",
+          "isCorrect": true
+        },
+        { "text": "Ottawa", "isCorrect": false },
+        { "text": "Washington", "isCorrect": false }
+      ]
+    }
+  ]
+}
