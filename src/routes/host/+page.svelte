@@ -16,6 +16,8 @@
   let gameState: number;
   let pin: string = "0617";
   let countdown: number;
+  let interval: NodeJS.Timer | undefined;
+  let leaderboard;
 
   database.subscribe((data) => {
     gameState = data;
@@ -38,17 +40,40 @@
     ["20px", "20px 20px 20px 0", "0 20px 20px 20px", "0 20px 20px 0"],
   ];
 
-
   function handleNextQuestion() {
+    console.log(interval);
+    if (interval) {
+      clearInterval(interval);
+      interval = undefined;
+      countdown = 0;
+      database.write(1, `${pin}/gameState`);
+      return;
+    }
+
     questionIndex += 1;
 
-    timer.start();
-    countdown = 20 - Math.round(timer.end());
+    if (questionIndex == quizData.questions.length) {
+      // database.delete(pin);
+      database.update(
+        {
+          gameState: null,
+          currentQuestion: null,
+        },
+        "0617"
+      );
+      fetch("/api/loadTrivia");
+      location.reload();
+      return;
+    }
 
-    let interval = setInterval(() => {
-      countdown = 20 - Math.round(timer.end());
+    timer.start();
+    countdown = 10 - Math.round(timer.end());
+
+    interval = setInterval(() => {
+      countdown = 10 - Math.round(timer.end());
       if (countdown == 0) {
         clearInterval(interval);
+        interval = undefined;
         database.write(1, `${pin}/gameState`);
       }
     }, 1000);
@@ -59,20 +84,32 @@
       answersDatabaseFormat[answer.text] = answer.isCorrect;
     });
 
-    database.write(
-      { currentQuestion: {questionText: quizData.questions[questionIndex].questionText, answers:answersDatabaseFormat}, gameState: 0 },
+    database.update(
+      {
+        currentQuestion: {
+          questionText: quizData.questions[questionIndex].questionText,
+          answers: answersDatabaseFormat,
+        },
+        gameState: 0,
+      },
       `${pin}`
     );
 
     currentQuestion = quizData.questions[questionIndex].questionText;
 
-    answers = quizData.questions[questionIndex].answers.sort((ans1, ans2)=>{return ans1.text > ans2.text ? 1: -1})
+    answers = quizData.questions[questionIndex].answers.sort((ans1, ans2) => {
+      return ans1.text > ans2.text ? 1 : -1;
+    });
   }
 </script>
 
 <div class="main">
   <div class="bar">
-    <div class="countdown">{countdown}</div>
+    {#if countdown != undefined}
+      <div class="countdown">{countdown}</div>
+    {:else}
+      <div />
+    {/if}
     <button on:click={handleNextQuestion}>Next</button>
   </div>
   {#if answers}
@@ -103,16 +140,18 @@
     margin: 20px 20px 20px 20px;
   }
   .countdown {
-    display: inline;
-    font-size: 40px;
+    display: inline-flex;
+    font-size: 23px;
     margin-right: 5px;
-    background-color: #1368ce;
+    background-color: #46178f;
     color: white;
     border-radius: 50%;
     padding: 10px;
-    height: 80px;
+    height: 65%;
     text-align: center;
     aspect-ratio: 1/1;
+    justify-content: center;
+    place-items: center;
     place-self: center end;
   }
   h1 {
@@ -131,5 +170,14 @@
     display: grid;
     height: 100%;
     grid-template-columns: 1fr 1fr;
+  }
+  button {
+    cursor: pointer;
+    background-color: #333333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333333;
+    outline: none;
   }
 </style>

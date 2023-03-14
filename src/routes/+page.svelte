@@ -4,16 +4,21 @@
   import quizData from "../quiz.json";
   import AnswerButton from "../lib/AnswerButton.svelte";
   import { onMount } from "svelte";
-  import { Timer, points } from "../timer";
+  import { Timer, points, timeToPoints } from "../timer";
+  import { page } from "$app/stores";
 
+  let pin = $page.url.searchParams.get("pin");
   let hasAnswered = false;
 
   let database = new DatabaseORM();
-  let answers: Answer[]|undefined;
+  let answers: Answer[] | undefined;
   let currentQuestion: string;
   let timer = new Timer();
 
   let gameState: number;
+  let name: string;
+  let nameBind: string;
+  let totalPoints: number = 0;
 
   onMount(() => {
     database.subscribe((data) => {
@@ -23,8 +28,8 @@
 
     database.subscribe((data: QuestionDatabase) => {
       hasAnswered = false;
-      if (data.questionText=="NULL") {
-        answers=undefined;
+      if (data == null) {
+        answers = undefined;
         return;
       }
       currentQuestion = data.questionText;
@@ -32,7 +37,7 @@
         return { text: val, isCorrect: data.answers[val] };
       });
       timer.start();
-    }, "0617/currentQuestion");
+    }, `0617/currentQuestion`);
   });
 
   // let currentQuestion: QuestionDatabase
@@ -41,7 +46,13 @@
   function handleAnswer(isCorrect: boolean) {
     hasAnswered = true;
     let endTime = timer.end();
-    points.update((n) => (n = endTime));
+    if (isCorrect) {
+      points.update((n) => (n = endTime));
+      totalPoints += timeToPoints(endTime);
+    }
+    let pointsObj: { [name: string]: number } = {};
+    pointsObj[name] = totalPoints;
+    database.update(pointsObj, "0617/users");
   }
 
   // function handleNextQuestion() {
@@ -55,34 +66,73 @@
     ["20px", "20px 20px 20px 0", "0 20px 20px 20px"],
     ["20px", "20px 20px 20px 0", "0 20px 20px 20px", "0 20px 20px 0"],
   ];
+
+  function handleSubmit() {
+    name = nameBind;
+  }
 </script>
 
-<div class="main">
-  {#if answers}
-    <h1>{currentQuestion}</h1>
-    <div class="answer-container">
-      {#each answers as answer, index}
-        <AnswerButton
-          {answer}
-          {index}
-          {hasAnswered}
-          handleAnswer={(isAnswerCorrect) => {
-            handleAnswer(isAnswerCorrect);
-          }}
-          {gameState}
-          marginStyles={marginStyles[answers.length - 2][index]}
-        />
-      {/each}
-    </div>
-  {/if}
-  <!-- <button on:click=()=>{}</button>> -->
-</div>
+{#if name}
+  <div class="main">
+    {#if answers}
+      <h1>{currentQuestion}</h1>
+      <div class="answer-container">
+        {#each answers as answer, index}
+          <AnswerButton
+            {answer}
+            {index}
+            {hasAnswered}
+            handleAnswer={(isAnswerCorrect) => {
+              handleAnswer(isAnswerCorrect);
+            }}
+            {gameState}
+            marginStyles={marginStyles[answers.length - 2][index]}
+          />
+        {/each}
+      </div>
+    {/if}
+  </div>
+{:else}
+  <div class="form">
+    <form
+      on:submit|preventDefault={() => {
+        handleSubmit();
+      }}
+    >
+      <input type="text" bind:value={nameBind} placeholder="Nickname" />
+      <br />
+      <button type="submit">Enter Game</button>
+    </form>
+  </div>
+{/if}
 
+<!-- <button on:click=()=>{}</button>> -->
 <style>
   h1 {
     text-align: center;
+    margin: 5px;
   }
-
+  .form {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  input,
+  button {
+    width: 100%;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333333;
+    outline: none;
+  }
+  button {
+    cursor: pointer;
+    background-color: #333333;
+    color: white;
+  }
   .main {
     display: grid;
     height: 100%;

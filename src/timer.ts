@@ -29,7 +29,7 @@ class Timer {
 }
 
 function timeToPoints(time: number) {
-  return Math.max(Math.round(-45*time + 1000),0);
+  return Math.max(Math.round(-100*time + 1000),0);
 }
 
 export { Timer, points, timeToPoints };

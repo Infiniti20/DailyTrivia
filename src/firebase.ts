@@ -5,7 +5,9 @@ import {
   onValue,
   get,
   Database,
-  set
+  set,
+  remove,
+  update
 } from "firebase/database";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -50,9 +52,18 @@ class DatabaseORM {
     });
   }
 
-  write(data:any, path: string) {
+  write(data: any, path: string) {
     let currentRef = ref(this._database, path);
-    set(currentRef, data)
+    set(currentRef, data);
+  }
+
+  delete(path: string) {
+    let currentRef = ref(this._database, path);
+    remove(currentRef);
+  }
+  update(data: any, path: string) {
+    let currentRef = ref(this._database, path);
+    update(currentRef, data);
   }
 }
 
