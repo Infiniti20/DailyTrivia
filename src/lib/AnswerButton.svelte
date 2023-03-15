@@ -81,6 +81,7 @@
     background-color: var(--color);
     font-size: 20px;
     width: calc(50vw - 30px);
+    height: calc(20vh - 30px);
     /* overflow-wrap: anywhere; */
     /* margin: 10px; */
     border-radius: 5px;

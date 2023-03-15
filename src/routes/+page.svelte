@@ -1,13 +1,10 @@
 <script lang="ts">
   import type { Question, Answer, QuestionDatabase } from "../types";
   import { DatabaseORM } from "../firebase";
-  import quizData from "../quiz.json";
   import AnswerButton from "../lib/AnswerButton.svelte";
   import { onMount } from "svelte";
   import { Timer, points, timeToPoints } from "../timer";
-  import { page } from "$app/stores";
 
-  let pin = $page.url.searchParams.get("pin");
   let hasAnswered = false;
 
   let database = new DatabaseORM();
@@ -20,24 +17,27 @@
   let nameBind: string;
   let totalPoints: number = 0;
 
-  onMount(() => {
-    database.subscribe((data) => {
-      gameState = data;
-      console.log(gameState);
-    }, "0617/gameState");
+  onMount(async () => {
+    let questions:Question[] = (await (await fetch("/api/getTrivia?offset=1")).json()).questions
+    currentQuestion=questions[0].questionText
+    answers = questions[0].answers 
+    // database.subscribe((data) => {
+    //   gameState = data;
+    //   console.log(gameState);
+    // }, "0617/gameState");
 
-    database.subscribe((data: QuestionDatabase) => {
-      hasAnswered = false;
-      if (data == null) {
-        answers = undefined;
-        return;
-      }
-      currentQuestion = data.questionText;
-      answers = Object.keys(data.answers).map((val): Answer => {
-        return { text: val, isCorrect: data.answers[val] };
-      });
-      timer.start();
-    }, `0617/currentQuestion`);
+    // database.subscribe((data: QuestionDatabase) => {
+    //   hasAnswered = false;
+    //   if (data == null) {
+    //     answers = undefined;
+    //     return;
+    //   }
+    //   currentQuestion = data.questionText;
+    //   answers = Object.keys(data.answers).map((val): Answer => {
+    //     return { text: val, isCorrect: data.answers[val] };
+    //   });
+    //   timer.start();
+    // }, `0617/currentQuestion`);
   });
 
   // let currentQuestion: QuestionDatabase
@@ -67,12 +67,9 @@
     ["20px", "20px 20px 20px 0", "0 20px 20px 20px", "0 20px 20px 0"],
   ];
 
-  function handleSubmit() {
-    name = nameBind;
-  }
 </script>
 
-{#if name}
+<!-- {#if name} -->
   <div class="main">
     {#if answers}
       <h1>{currentQuestion}</h1>
@@ -92,7 +89,7 @@
       </div>
     {/if}
   </div>
-{:else}
+<!-- {:else}
   <div class="form">
     <form
       on:submit|preventDefault={() => {
@@ -104,7 +101,7 @@
       <button type="submit">Enter Game</button>
     </form>
   </div>
-{/if}
+{/if} -->
 
 <!-- <button on:click=()=>{}</button>> -->
 <style>
