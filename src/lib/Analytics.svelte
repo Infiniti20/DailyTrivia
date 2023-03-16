@@ -24,7 +24,7 @@
 
   function share(){
     navigator.share({
-      url:`http://localhost:5173/share?t=${score}`,
+      url:`/share?t=${score}`,
       title:'Daily Trivia',
       text: `I completed Daily Trivia with ${score} points`
     })
