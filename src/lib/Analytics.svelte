@@ -21,6 +21,14 @@
   function hideEndScreen(){
     endScreen=false;
   }
+
+  function share(){
+    navigator.share({
+      url:`http://localhost:5173/share?t=${score}`,
+      title:'Daily Trivia',
+      text: `I completed Daily Trivia with ${score} points`
+    })
+  }
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -34,7 +42,7 @@
       {/if}
       <div class="buttons">
         <button>Leaderboard</button>
-        <button class="icon">Share</button>
+        <button class="icon" on:click={share}>Share</button>
       </div>
     </span>
   {:else}
