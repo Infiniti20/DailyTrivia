@@ -1,0 +1,105 @@
+<script lang="ts">
+  export let score: number | undefined;
+  export let wasButton: boolean;
+  export let endScreen:boolean;
+
+  //! UPDATE THIS TO HAVE MULTIPLE MESSAGES
+  let messageRange = [
+    "Maybe trivia isn't your thing.",
+    "Nice try...",
+    "Pretty good!",
+    "You know your trivia!",
+    "Great job!",
+    "AMAZING!",
+    "Are you hacking?",
+  ];
+
+  function getMessage(score: number) {
+    return messageRange[Math.trunc(score / (3000 / (messageRange.length - 1)))];
+  }
+
+  function hideEndScreen(){
+    endScreen=false;
+  }
+</script>
+
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<div class="bg" on:click|self={hideEndScreen}>
+  {#if !wasButton}
+    <span class="modal">
+      <span class="intro">You got</span>
+      <h1>{score ?? "-"}</h1>
+      {#if score}
+        <span class="message">{getMessage(score)}</span>
+      {/if}
+      <div class="buttons">
+        <button>Leaderboard</button>
+        <button class="icon">Share</button>
+      </div>
+    </span>
+  {:else}
+    <span class="modal" />
+  {/if}
+</div>
+
+<style>
+  .bg {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: absolute;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    display: grid;
+    place-items: center;
+  }
+  .modal {
+    padding: 30px;
+    background-color: white;
+    border-radius: 5px;
+    display: block;
+    animation: fly-in 0.4s linear;
+    text-align: center;
+  }
+  .intro {
+    font-size: 20px;
+  }
+  .message {
+    opacity: 0.8;
+    font-size: 14px;
+  }
+
+  @keyframes fly-in {
+    from {
+      transform: translateY(50vh);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  .buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+  }
+
+  button {
+    cursor: pointer;
+    background-color: #333333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #333333;
+    outline: none;
+  }
+  button:nth-child(1) {
+    margin-right: 5px;
+  }
+  .icon::after {
+    content: "";
+    font-family: "icomoon";
+    margin-left: 10px;
+    font-size: 12px;
+  }
+</style>

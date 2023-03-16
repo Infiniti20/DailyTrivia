@@ -6,7 +6,6 @@
   export let index: number;
   export let handleAnswer = (isCorrect: boolean) => {};
   export let hasAnswered: boolean;
-  export let gameState: number;
 
   export let marginStyles: string;
 
@@ -18,14 +17,22 @@
     pointsDisplayed = value;
   });
 
-  $: gameState, handleGameStateChange();
-
-  function handleGameStateChange() {
-    console.log("game state changed idk run twice");
-    if (gameState == 0 && hasAnswered == false) {
-      wasClicked = false;
+  function handleAnswerChange(hasAnswered:boolean){
+    if(hasAnswered == false){
+      // console.log(`${answer.text}' Was reset`)
+      wasClicked = false
     }
+    // console.log(`'${answer.text}' Was Clicked: ${wasClicked ? 'yes':'no'}`)
   }
+
+$: handleAnswerChange(hasAnswered)
+
+  // function handleGameStateChange() {
+  //   console.log("game state changed idk run twice");
+  //   if (hasAnswered == false) {
+  //     wasClicked = false;
+  //   }
+  // }
 </script>
 
 <button
@@ -33,35 +40,23 @@
     if (hasAnswered == true) {
       return;
     }
+    wasClicked=true
     handleAnswer(answer.isCorrect);
-    wasClicked = true;
   }}
-  class={gameState == 1 ? (answer.isCorrect ? "correct" : "incorrect") : ""}
-  class:inactive={hasAnswered && !wasClicked && gameState == 0}
-  class:active={hasAnswered && wasClicked && gameState == 0}
+  class={hasAnswered ? (answer.isCorrect ? "correct" : "incorrect") : ""}
   style="--color:{theme[index]};margin:{marginStyles}"
 >
   <div>
     <span> {answer.text}</span>
-    {#if hasAnswered == true && answer.isCorrect && wasClicked && gameState == 1}
+    {#if hasAnswered && wasClicked && answer.isCorrect}
       <br />
-      +{timeToPoints(pointsDisplayed)}
+      <span>+{timeToPoints(pointsDisplayed)}</span>
     {/if}
   </div>
 </button>
 
 <style>
-  @font-face {
-    font-family: "icomoon";
-    src: url("fonts/icomoon.eot?5uosik");
-    src: url("fonts/icomoon.eot?5uosik#iefix") format("embedded-opentype"),
-      url("fonts/icomoon.ttf?5uosik") format("truetype"),
-      url("fonts/icomoon.woff?5uosik") format("woff"),
-      url("fonts/icomoon.svg?5uosik#icomoon") format("svg");
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-  }
+
 
   .correct {
     background: #26890c;
@@ -81,7 +76,7 @@
     background-color: var(--color);
     font-size: 20px;
     width: calc(50vw - 30px);
-    height: calc(20vh - 30px);
+    height: calc(100% - 40px);
     /* overflow-wrap: anywhere; */
     /* margin: 10px; */
     border-radius: 5px;
@@ -93,25 +88,7 @@
   span {
     font-weight: bold;
     /* font-size: 1vw; */
-    font-size: calc(20% + 1.75vw);
-  }
-  .inactive {
-    background-color: grey;
-    transition: background-color 100ms linear;
-  }
-  .active::after {
-    content: "";
-    display: inline-block;
-    /* top: 50%;
-    left: 50%; */
-    /* margin-top: -30px;
-    margin-left: -30px; */
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    border: 5px solid white;
-    border-top-color: transparent;
-    animation: loading 1.5s ease-in-out infinite;
+    font-size: min(calc((50vw - 30px) / 10), 40px);
   }
 
   @keyframes loading {
@@ -145,11 +122,7 @@
     }
   }
 
-  @media (max-width: 999px) {
-    .active span {
-      display: none;
-    }
-  }
+
 
   div {
     /* overflow: hidden;

@@ -1,135 +1,130 @@
 <script lang="ts">
-  import type { Question, Answer, QuestionDatabase } from "../types";
-  import { DatabaseORM } from "../firebase";
+  import type { Question, Answer, GameState } from "../types";
   import AnswerButton from "../lib/AnswerButton.svelte";
   import { onMount } from "svelte";
   import { Timer, points, timeToPoints } from "../timer";
+  import NavBar from "$lib/NavBar.svelte";
+  import StartForm from "$lib/StartForm.svelte";
+  import Analytics from "$lib/Analytics.svelte";
 
-  let hasAnswered = false;
+  export let data;
+  console.log(data.id)
 
-  let database = new DatabaseORM();
-  let answers: Answer[] | undefined;
-  let currentQuestion: string;
+  let questions: Question[];
+  let endScreen: boolean = false;
+  let wasButton: boolean;
+
   let timer = new Timer();
-
-  let gameState: number;
+  let interval: NodeJS.Timer;
+  //@ts-ignore
+  let gameState: GameState = {
+    questionIndex: -1,
+    totalPoints: 0,
+  };
   let name: string;
-  let nameBind: string;
-  let totalPoints: number = 0;
 
-  onMount(async () => {
-    let questions:Question[] = (await (await fetch("/api/getTrivia?offset=1")).json()).questions
-    currentQuestion=questions[0].questionText
-    answers = questions[0].answers 
-    // database.subscribe((data) => {
-    //   gameState = data;
-    //   console.log(gameState);
-    // }, "0617/gameState");
+  let handleSubmit = () => {
+    gameState.hasStarted = true;
+    handleNext();
+  };
 
-    // database.subscribe((data: QuestionDatabase) => {
-    //   hasAnswered = false;
-    //   if (data == null) {
-    //     answers = undefined;
-    //     return;
-    //   }
-    //   currentQuestion = data.questionText;
-    //   answers = Object.keys(data.answers).map((val): Answer => {
-    //     return { text: val, isCorrect: data.answers[val] };
-    //   });
-    //   timer.start();
-    // }, `0617/currentQuestion`);
-  });
+  function startTimer() {
+    timer.start();
+    gameState.countdown = 10;
 
-  // let currentQuestion: QuestionDatabase
-  // $: currentQuestion = quizData.questions[questionIndex]
-
-  function handleAnswer(isCorrect: boolean) {
-    hasAnswered = true;
-    let endTime = timer.end();
-    if (isCorrect) {
-      points.update((n) => (n = endTime));
-      totalPoints += timeToPoints(endTime);
-    }
-    let pointsObj: { [name: string]: number } = {};
-    pointsObj[name] = totalPoints;
-    database.update(pointsObj, "0617/users");
+    interval = setInterval(() => {
+      gameState.countdown = 10 - Math.trunc(timer.end());
+      if (gameState.countdown == 0) {
+        clearInterval(interval);
+      }
+    }, 1000);
   }
 
-  // function handleNextQuestion() {
-  //   hasAnswered = false
-  //   status = ''
-  //   questionIndex += 1
-  // }
+  onMount(async () => {
+    questions = (await (await fetch("/api/getTrivia?offset=0")).json())
+      .questions;
+  });
+
+  function handleAnswer(isCorrect: boolean) {
+    gameState.hasAnswered = true;
+    let endTime = timer.end();
+    clearInterval(interval);
+
+    if (isCorrect) {
+      points.update((n) => (n = endTime));
+      gameState.totalPoints += timeToPoints(endTime);
+    }
+    let pointsObj: { [name: string]: number } = {};
+    pointsObj[name] = gameState.totalPoints;
+  }
+
+  function handleAnalytics() {
+    wasButton = (gameState.questionIndex >= questions.length) ? false : true
+    endScreen = true;
+  }
+
+  function handleNext() {
+    gameState.questionIndex++;
+    if (gameState.questionIndex >= questions.length) {
+      console.log("hita thge");
+      endScreen = true;
+      wasButton = false;
+      fetch("/api/writeHighscore", {
+        method:"POST",
+        body:JSON.stringify({
+          id:data.id,
+          name,
+          score:gameState.totalPoints
+        })
+      })
+      return;
+    }
+    gameState.hasAnswered = false;
+    startTimer();
+    gameState.question = questions[gameState.questionIndex].questionText;
+    gameState.answers = questions[gameState.questionIndex].answers.sort(
+      () => Math.random() - 0.5
+    );
+  }
 
   let marginStyles = [
     ["20px", "20px 20px 20px 0"],
     ["20px", "20px 20px 20px 0", "0 20px 20px 20px"],
     ["20px", "20px 20px 20px 0", "0 20px 20px 20px", "0 20px 20px 0"],
   ];
-
 </script>
 
-<!-- {#if name} -->
-  <div class="main">
-    {#if answers}
-      <h1>{currentQuestion}</h1>
+{#if name && (gameState?.hasStarted ?? false)}
+  {#if gameState.answers}
+    <div class="main">
+      <NavBar timerDisplay={gameState.countdown} {handleNext} {handleAnalytics} />
+      <h1>{gameState.question}</h1>
       <div class="answer-container">
-        {#each answers as answer, index}
+        {#each gameState.answers as answer, index}
           <AnswerButton
             {answer}
             {index}
-            {hasAnswered}
-            handleAnswer={(isAnswerCorrect) => {
-              handleAnswer(isAnswerCorrect);
-            }}
-            {gameState}
-            marginStyles={marginStyles[answers.length - 2][index]}
+            hasAnswered={gameState.hasAnswered}
+            {handleAnswer}
+            marginStyles={marginStyles[gameState.answers.length - 2][index]}
           />
         {/each}
       </div>
-    {/if}
-  </div>
-<!-- {:else}
-  <div class="form">
-    <form
-      on:submit|preventDefault={() => {
-        handleSubmit();
-      }}
-    >
-      <input type="text" bind:value={nameBind} placeholder="Nickname" />
-      <br />
-      <button type="submit">Enter Game</button>
-    </form>
-  </div>
-{/if} -->
+    </div>
+  {/if}
+{:else}
+  <StartForm bind:name {handleSubmit} />
+{/if}
+{#if endScreen}
+  <Analytics score={gameState.totalPoints} wasButton={wasButton} bind:endScreen/>
+{/if}
 
-<!-- <button on:click=()=>{}</button>> -->
 <style>
   h1 {
     text-align: center;
-    margin: 5px;
+    margin: 15px;
   }
-  .form {
-    display: grid;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-  input,
-  button {
-    width: 100%;
-    margin: 5px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #333333;
-    outline: none;
-  }
-  button {
-    cursor: pointer;
-    background-color: #333333;
-    color: white;
-  }
+
   .main {
     display: grid;
     height: 100%;
@@ -137,11 +132,12 @@
     justify-content: center;
     align-items: center;
     grid-template-columns: 1fr;
-    grid-template-rows: 60% 40%;
+    grid-template-rows: 10% 50% calc(40% + 20px);
   }
   .answer-container {
     display: grid;
     height: 100%;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 </style>
