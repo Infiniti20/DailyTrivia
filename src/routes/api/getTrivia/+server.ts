@@ -34,14 +34,20 @@ function cyrb128(str: string) {
     (h4 ^ h1) >>> 0,
   ];
 }
-
+//TODO: FIX RANDOMNESS TO BE MORE RANDOM
 function generateQuestions(dayOffset: string) {
-  let seeds = cyrb128(dayOffset);
-  seeds.pop();
+  let seeds = cyrb128("012345678");
   let mulberry = mulberry32(seeds[0]);
+  let days = parseInt(dayOffset);
+  for (let i = 0; i < (days - 1) * 5; i++) {
+    mulberry();
+  }
   let questions = [];
   for (let i = 0; i < 5; i++) {
-    let question =quizData[transformRange(mulberry(), { min: 0, max: 1 }, { min: 0, max: 99 })];
+    let question =
+      quizData[
+      transformRange(mulberry(), { min: 0, max: 1 }, { min: 0, max: 200 })
+    ];
     questions.push(question);
   }
 
@@ -76,8 +82,9 @@ export const GET: RequestHandler = async ({
       })
     );
   }
-  let questions = generateQuestions((parseInt(dayOffset)+1).toString());
-  // let questionNext = generateQuestions((parseInt(dayOffset) + 1).toString());
+  let questions = generateQuestions((parseInt(dayOffset) + 1).toString());
+  // let questionNext = generateQuestions((parseInt(dayOffset) + 2).toString());
+
   // console.log(
   //   `Offset: ${dayOffset} is ${
   //     !(

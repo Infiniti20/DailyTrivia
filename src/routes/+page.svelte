@@ -46,17 +46,23 @@
     return days;
   }
   onMount(async () => {
-    questions = (await (await fetch("/api/getTrivia?offset=0")).json())
+    let offset = calculateDays(new Date("3/17/2023") , new Date())
+    console.log(offset)
+    questions = (await (await fetch(`/api/getTrivia?offset=${offset}`)).json())
       .questions;
     let date2 = new Date();
     let date1 = new Date(
       parseInt(
-        localStorage.getItem("lastCompleted") ?? new Date("1965").getTime().toString()
+        localStorage.getItem("lastCompleted") ??
+          new Date("1965").getTime().toString()
       )
     );
-let days=calculateDays(date1, date2)
-    if ( days < 1) {
-      gameState.totalPoints = parseInt(localStorage.getItem("lastScore") ?? "0");
+    let days = calculateDays(date1, date2);
+
+    if (days < 1) {
+      gameState.totalPoints = parseInt(
+        localStorage.getItem("lastScore") ?? "0"
+      );
       gameState.questionIndex = questions.length - 1;
 
       gameState.hasStarted = true;
@@ -107,7 +113,7 @@ let days=calculateDays(date1, date2)
         }),
       });
       localStorage.setItem("lastCompleted", new Date().getTime().toString());
-      localStorage.setItem("lastScore", gameState.totalPoints.toString())
+      localStorage.setItem("lastScore", gameState.totalPoints.toString());
       return;
     }
     gameState.hasAnswered = false;
