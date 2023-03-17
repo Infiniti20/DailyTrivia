@@ -116,7 +116,7 @@
   <StartForm bind:name {handleSubmit} />
 {/if}
 {#if endScreen}
-  <Analytics score={gameState.totalPoints} wasButton={wasButton} bind:endScreen/>
+  <Analytics score={gameState.totalPoints} wasButton={wasButton} bind:endScreen {name}/>
 {/if}
 
 <style>

@@ -2,27 +2,28 @@
   import { goto } from "$app/navigation";
   import { page } from "$app/stores";
 
-  const time = parseInt($page.url.searchParams.get("t")?? "0")
-function navigate(){
-  goto("/")
-}
-try{
-navigate()
-}catch{
-    
-}
+  const time = parseInt($page.url.searchParams.get("t") ?? "0");
+  const name = $page.url.searchParams.get("n") ?? "I"
+  function navigate() {
+    goto("/")
+  }
+  try {
+    navigate();
+  } catch {}
 </script>
+
 <svelte:head>
-    <meta property="og:type" content="website">
+  <meta property="og:type" content="website" />
 
-<meta property="og:url" content="/">
+  <meta property="og:url" content="/" />
 
-<meta property="og:title" content="DailyTrivia">
+  <meta property="og:title" content="DailyTrivia" />
 
-<meta property="og:description" content="DailyTrivia is awesome">
+  <meta property="og:description" content="It's in the name" />
 
-<meta property="og:image" content="[https://ia.media-imdb.com/images/rock.jpg](https://ia.media-imdb.com/images/rock.jpg)">
-
-
+  <meta
+    property="og:image"
+    content="https://rest.apitemplate.io/05077b2383303bea@CziFDL5Y/image.png?score.text={time}&name.text={`${name} scored`}"
+  />
 </svelte:head>
-<div>{time}</div>
+<div>Loading, hang on</div>

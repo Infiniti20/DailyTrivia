@@ -2,6 +2,7 @@
   export let score: number | undefined;
   export let wasButton: boolean;
   export let endScreen: boolean;
+  export let name:string;
 
   //! UPDATE THIS TO HAVE MULTIPLE MESSAGES
   let messageRange = [
@@ -26,7 +27,7 @@
 
   function share() {
     navigator.share({
-      url: `/share?t=${score}`,
+      url: `/share?t=${score}&n=${name}`,
       title: "Daily Trivia",
       text: `I completed Daily Trivia with ${score} points`,
     });
