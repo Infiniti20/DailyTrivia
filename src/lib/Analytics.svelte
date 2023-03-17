@@ -3,6 +3,7 @@
   export let wasButton: boolean;
   export let endScreen: boolean;
   export let name:string;
+  
 
   //! UPDATE THIS TO HAVE MULTIPLE MESSAGES
   let messageRange = [

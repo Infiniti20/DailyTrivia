@@ -8,7 +8,7 @@
   import Analytics from "$lib/Analytics.svelte";
 
   export let data;
-  console.log(data.id)
+  console.log(data.id);
 
   let questions: Question[];
   let endScreen: boolean = false;
@@ -40,9 +40,35 @@
     }, 1000);
   }
 
+  function calculateDays(date1: Date, date2: Date) {
+    let difference = date1.getTime() - date2.getTime();
+    let days = Math.abs(Math.ceil(difference / (1000 * 3600 * 24)));
+    return days;
+  }
   onMount(async () => {
     questions = (await (await fetch("/api/getTrivia?offset=0")).json())
       .questions;
+    let date2 = new Date();
+    let date1 = new Date(
+      parseInt(
+        localStorage.getItem("lastCompleted") ?? new Date("1965").getTime().toString()
+      )
+    );
+let days=calculateDays(date1, date2)
+    if ( days < 1) {
+      gameState.totalPoints = parseInt(localStorage.getItem("lastScore") ?? "0");
+      gameState.questionIndex = questions.length - 1;
+
+      gameState.hasStarted = true;
+      gameState.hasAnswered = false;
+
+      gameState.question = questions[gameState.questionIndex].questionText;
+      gameState.answers = questions[gameState.questionIndex].answers.sort(
+        () => Math.random() - 0.5
+      );
+      gameState.countdown = 10;
+      endScreen = true;
+    }
   });
 
   function handleAnswer(isCorrect: boolean) {
@@ -59,7 +85,7 @@
   }
 
   function handleAnalytics() {
-    wasButton = (gameState.questionIndex >= questions.length) ? false : true
+    wasButton = gameState.questionIndex >= questions.length ? false : true;
     endScreen = true;
   }
 
@@ -69,14 +95,19 @@
       console.log("hita thge");
       endScreen = true;
       wasButton = false;
+      if (!name) {
+        return;
+      }
       fetch("/api/writeHighscore", {
-        method:"POST",
-        body:JSON.stringify({
-          id:data.id,
+        method: "POST",
+        body: JSON.stringify({
+          id: data.id,
           name,
-          score:gameState.totalPoints
-        })
-      })
+          score: gameState.totalPoints,
+        }),
+      });
+      localStorage.setItem("lastCompleted", new Date().getTime().toString());
+      localStorage.setItem("lastScore", gameState.totalPoints.toString())
       return;
     }
     gameState.hasAnswered = false;
@@ -94,10 +125,14 @@
   ];
 </script>
 
-{#if name && (gameState?.hasStarted ?? false)}
+{#if gameState?.hasStarted ?? false}
   {#if gameState.answers}
     <div class="main">
-      <NavBar timerDisplay={gameState.countdown} {handleNext} {handleAnalytics} />
+      <NavBar
+        timerDisplay={gameState.countdown}
+        {handleNext}
+        {handleAnalytics}
+      />
       <h1>{gameState.question}</h1>
       <div class="answer-container">
         {#each gameState.answers as answer, index}
@@ -116,7 +151,7 @@
   <StartForm bind:name {handleSubmit} />
 {/if}
 {#if endScreen}
-  <Analytics score={gameState.totalPoints} wasButton={wasButton} bind:endScreen {name}/>
+  <Analytics score={gameState.totalPoints} {wasButton} bind:endScreen {name} />
 {/if}
 
 <style>
