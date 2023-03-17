@@ -1,33 +1,35 @@
 <script lang="ts">
   export let score: number | undefined;
   export let wasButton: boolean;
-  export let endScreen:boolean;
+  export let endScreen: boolean;
 
   //! UPDATE THIS TO HAVE MULTIPLE MESSAGES
   let messageRange = [
     "Maybe trivia isn't your thing.",
     "Nice try...",
+    "Not bad!",
     "Pretty good!",
     "You know your trivia!",
+    "Good stuff!",
     "Great job!",
     "AMAZING!",
     "Are you hacking?",
   ];
 
   function getMessage(score: number) {
-    return messageRange[Math.trunc(score / (3000 / (messageRange.length - 1)))];
+    return messageRange[Math.trunc(score / (5000 / (messageRange.length - 1)))];
   }
 
-  function hideEndScreen(){
-    endScreen=false;
+  function hideEndScreen() {
+    endScreen = false;
   }
 
-  function share(){
+  function share() {
     navigator.share({
-      url:`/share?t=${score}`,
-      title:'Daily Trivia',
-      text: `I completed Daily Trivia with ${score} points`
-    })
+      url: `/share?t=${score}`,
+      title: "Daily Trivia",
+      text: `I completed Daily Trivia with ${score} points`,
+    });
   }
 </script>
 

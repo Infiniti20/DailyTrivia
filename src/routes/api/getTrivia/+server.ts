@@ -1,5 +1,6 @@
 import type { RequestEvent, RequestHandler } from "@sveltejs/kit";
 import quizData from "../../../quiz.json";
+import type { Answer } from "../../../types";
 
 function mulberry32(a: number) {
   return function () {
@@ -22,7 +23,7 @@ function cyrb128(str: string) {
     h3 = h4 ^ Math.imul(h3 ^ k, 951274213);
     h4 = h1 ^ Math.imul(h4 ^ k, 2716044179);
   }
-  h1 = Math.imul(h3 ^ (h1 >>> 18), 597399066);
+  h1 = Math.imul(h3 ^ (h1 >>> 18), 597399067);
   h2 = Math.imul(h4 ^ (h2 >>> 22), 2869860233);
   h3 = Math.imul(h1 ^ (h3 >>> 17), 951274213);
   h4 = Math.imul(h2 ^ (h4 >>> 19), 2716044179);
@@ -35,14 +36,15 @@ function cyrb128(str: string) {
 }
 
 function generateQuestions(dayOffset: string) {
-  let seeds = cyrb128(dayOffset.toString());
+  let seeds = cyrb128(dayOffset);
   seeds.pop();
   let mulberry = mulberry32(seeds[0]);
-  let questions = seeds.map((val) => {
-    return quizData[
-      transformRange(mulberry(), { min: 0, max: 1 }, { min: 0, max: 49 })
-    ];
-  });
+  let questions = [];
+  for (let i = 0; i < 5; i++) {
+    let question =quizData[transformRange(mulberry(), { min: 0, max: 1 }, { min: 0, max: 99 })];
+    questions.push(question);
+  }
+
   return questions;
 }
 
@@ -55,6 +57,12 @@ function transformRange(
   return Math.trunc((value - r1.min) * scale);
 }
 
+function findCommonElements3(arr1: any[], arr2: any[]) {
+  return arr1.some((item) => arr2.includes(item));
+}
+function hasDuplicates(array: any[]) {
+  return new Set(array).size !== array.length;
+}
 export const GET: RequestHandler = async ({
   request,
   params,
@@ -68,7 +76,17 @@ export const GET: RequestHandler = async ({
       })
     );
   }
-  let questions = generateQuestions(dayOffset);
+  let questions = generateQuestions((parseInt(dayOffset)+1).toString());
+  // let questionNext = generateQuestions((parseInt(dayOffset) + 1).toString());
+  // console.log(
+  //   `Offset: ${dayOffset} is ${
+  //     !(
+  //       findCommonElements3(questions, questionNext) || hasDuplicates(questions)
+  //     )
+  //       ? "valid"
+  //       : "invalid"
+  //   }`
+  // );
   return new Response(
     JSON.stringify({
       questions,

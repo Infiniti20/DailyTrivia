@@ -1048,5 +1048,1056 @@
         "isCorrect": false
       }
     ]
-  }
+  },[
+    {
+      "questionText": "What type of instrument is a harpsichord?",
+      "answers": [
+        {
+          "text": "Stringed",
+          "isCorrect": true
+        },
+        {
+          "text": "Brass",
+          "isCorrect": false
+        },
+        {
+          "text": "Woodwind",
+          "isCorrect": false
+        },
+        {
+          "text": "Percussion",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What was the third country to get the atomic bomb?",
+      "answers": [
+        {
+          "text": "Britain",
+          "isCorrect": true
+        },
+        {
+          "text": "France",
+          "isCorrect": false
+        },
+        {
+          "text": "Germany",
+          "isCorrect": false
+        },
+        {
+          "text": "China",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "In phonetics, the j in 'juice' is an example of what kind of sound?",
+      "answers": [
+        {
+          "text": "affricative",
+          "isCorrect": true
+        },
+        {
+          "text": "nasal",
+          "isCorrect": false
+        },
+        {
+          "text": "plosive",
+          "isCorrect": false
+        },
+        {
+          "text": "approximant",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Name the movie that matches the following plot summary: 'Eddy has a week to pay back £500,000 after losing a poker game to a powerful local mobster.'",
+      "answers": [
+        {
+          "text": "Lock, Stock and Two Smoking Barrels",
+          "isCorrect": true
+        },
+        {
+          "text": "La Haine",
+          "isCorrect": false
+        },
+        {
+          "text": "The Deer Hunter",
+          "isCorrect": false
+        },
+        {
+          "text": "Dead Poets Society",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What is the nickname of the English football team AFC Bournemouth?",
+      "answers": [
+        {
+          "text": "The Cherries",
+          "isCorrect": true
+        },
+        {
+          "text": "The Potters",
+          "isCorrect": false
+        },
+        {
+          "text": "The Hornets",
+          "isCorrect": false
+        },
+        {
+          "text": "The Sky Blues",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What city was founded in 753 BC?",
+      "answers": [
+        {
+          "text": "Rome",
+          "isCorrect": true
+        },
+        {
+          "text": "Athens",
+          "isCorrect": false
+        },
+        {
+          "text": "Beijing",
+          "isCorrect": false
+        },
+        {
+          "text": "Bagdhad",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "In which country is the city of Zagreb?",
+      "answers": [
+        {
+          "text": "Croatia",
+          "isCorrect": true
+        },
+        {
+          "text": "Estonia",
+          "isCorrect": false
+        },
+        {
+          "text": "Luxembourg",
+          "isCorrect": false
+        },
+        {
+          "text": "Germany",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which author wrote 'Waiting for Godot'?",
+      "answers": [
+        {
+          "text": "Samuel Beckett",
+          "isCorrect": true
+        },
+        {
+          "text": "Oscar Wilde",
+          "isCorrect": false
+        },
+        {
+          "text": "Nikolai Gogol",
+          "isCorrect": false
+        },
+        {
+          "text": "Jonathan Swift",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "The painting \"The Last Supper\" by Leonardo da Vinci is a part of which art movement?",
+      "answers": [
+        {
+          "text": "High Renaissance",
+          "isCorrect": true
+        },
+        {
+          "text": "Art Nouveau",
+          "isCorrect": false
+        },
+        {
+          "text": "Crystal Cubism",
+          "isCorrect": false
+        },
+        {
+          "text": "Baroque",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What is the Dutch word for 'five'?",
+      "answers": [
+        {
+          "text": "Vijf",
+          "isCorrect": true
+        },
+        {
+          "text": "Cinque",
+          "isCorrect": false
+        },
+        {
+          "text": "Fünf",
+          "isCorrect": false
+        },
+        {
+          "text": "Groen",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which of these quotes is from the film 'Poltergeist'?",
+      "answers": [
+        {
+          "text": "\"They're here!\"",
+          "isCorrect": true
+        },
+        {
+          "text": "\"Of all the gin joints in all the towns in all the world, she walks into mine.\"",
+          "isCorrect": false
+        },
+        {
+          "text": "\"I drink your milkshake. I drink it up.\"",
+          "isCorrect": false
+        },
+        {
+          "text": "\"Love means never having to say you're sorry.\"",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which artist painted \"Impression, Sunrise\"",
+      "answers": [
+        {
+          "text": "Claude Monet",
+          "isCorrect": true
+        },
+        {
+          "text": "Leonardo da Vinci",
+          "isCorrect": false
+        },
+        {
+          "text": "Hokusai",
+          "isCorrect": false
+        },
+        {
+          "text": "Pieter Bruegel the Elder",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "How does that Latin phrase 'Fons vitae caritas' translate into English?",
+      "answers": [
+        {
+          "text": "Love is the fountain of life",
+          "isCorrect": true
+        },
+        {
+          "text": "Such is life",
+          "isCorrect": false
+        },
+        {
+          "text": "Through fire, nature is reborn whole",
+          "isCorrect": false
+        },
+        {
+          "text": "Virtue strives for what is difficult",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "From the Christmas Carol \"Good King Wenceslas\", where was Good King Wenceslas the King of?",
+      "answers": [
+        {
+          "text": "Bohemia",
+          "isCorrect": true
+        },
+        {
+          "text": "Prussia",
+          "isCorrect": false
+        },
+        {
+          "text": "Silesia",
+          "isCorrect": false
+        },
+        {
+          "text": "Moravia",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which of these is a baseball team based in Milwaukee?",
+      "answers": [
+        {
+          "text": "Milwaukee Brewers",
+          "isCorrect": true
+        },
+        {
+          "text": "Milwaukee Jets",
+          "isCorrect": false
+        },
+        {
+          "text": "Milwaukee Orioles",
+          "isCorrect": false
+        },
+        {
+          "text": "Milwaukee Tigers",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which of these dishes would you most expect to find in Afghanistan?",
+      "answers": [
+        {
+          "text": "Kabuli Pulao",
+          "isCorrect": true
+        },
+        {
+          "text": "Frikadeller",
+          "isCorrect": false
+        },
+        {
+          "text": "Ema Datshi",
+          "isCorrect": false
+        },
+        {
+          "text": "Masala Dosa",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which Irish rock band released the song 'All I Want Is You'?",
+      "answers": [
+        {
+          "text": "U2",
+          "isCorrect": true
+        },
+        {
+          "text": "Public Image Ltd.",
+          "isCorrect": false
+        },
+        {
+          "text": "The Script",
+          "isCorrect": false
+        },
+        {
+          "text": "The Cure",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "The language 'Jin Chinese' belongs to which language family?",
+      "answers": [
+        {
+          "text": "Sino-Tibetan",
+          "isCorrect": true
+        },
+        {
+          "text": "Austroasiatic",
+          "isCorrect": false
+        },
+        {
+          "text": "Indo-European",
+          "isCorrect": false
+        },
+        {
+          "text": "Niger–Congo",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What is the capital city of South Sudan?",
+      "answers": [
+        {
+          "text": "Juba",
+          "isCorrect": true
+        },
+        {
+          "text": "Caracas",
+          "isCorrect": false
+        },
+        {
+          "text": "Dhaka",
+          "isCorrect": false
+        },
+        {
+          "text": "Luanda",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Who was the 40th president of the USA, in term during the period 1981–1989?",
+      "answers": [
+        {
+          "text": "Ronald Reagan",
+          "isCorrect": true
+        },
+        {
+          "text": "John Quincy Adams",
+          "isCorrect": false
+        },
+        {
+          "text": "Gerald Ford",
+          "isCorrect": false
+        },
+        {
+          "text": "James Polk",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What is Will Smith's Rapper Alter Ego?",
+      "answers": [
+        {
+          "text": "The Fresh Prince",
+          "isCorrect": true
+        },
+        {
+          "text": "DJ Jazzy Jeff",
+          "isCorrect": false
+        },
+        {
+          "text": "Eminem",
+          "isCorrect": false
+        },
+        {
+          "text": "Jay Z",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What is the word for a male eagle?",
+      "answers": [
+        {
+          "text": "A Tiercel",
+          "isCorrect": true
+        },
+        {
+          "text": "A Macho",
+          "isCorrect": false
+        },
+        {
+          "text": "A Cock",
+          "isCorrect": false
+        },
+        {
+          "text": "A Billy",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "'Probably the best lager in the world' is a slogan associated with which beer brand?",
+      "answers": [
+        {
+          "text": "Carlsberg",
+          "isCorrect": true
+        },
+        {
+          "text": "Heineken",
+          "isCorrect": false
+        },
+        {
+          "text": "Fosters",
+          "isCorrect": false
+        },
+        {
+          "text": "Budweiser",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What is Audiology the study of?",
+      "answers": [
+        {
+          "text": "hearing; a branch of medicine",
+          "isCorrect": true
+        },
+        {
+          "text": "the ecology of any individual species",
+          "isCorrect": false
+        },
+        {
+          "text": "the origin and spread of diseases",
+          "isCorrect": false
+        },
+        {
+          "text": "rocks",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which of these dishes is most associated with Bahrain?",
+      "answers": [
+        {
+          "text": "Chicken Machboos",
+          "isCorrect": true
+        },
+        {
+          "text": "Ambuyat",
+          "isCorrect": false
+        },
+        {
+          "text": "Pepperpot",
+          "isCorrect": false
+        },
+        {
+          "text": "Pho",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What Connects Kenny Everett, Annie Lennox, And Sir Isaac Newton?",
+      "answers": [
+        {
+          "text": "All Born On Christmas Day",
+          "isCorrect": true
+        },
+        {
+          "text": "All British Nobility",
+          "isCorrect": false
+        },
+        {
+          "text": "All Died By Drowning",
+          "isCorrect": false
+        },
+        {
+          "text": "All Related To Each Other (by blood)",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Who is the Greek equivalent of the Roman god Vulcan?",
+      "answers": [
+        {
+          "text": "Hephaistos",
+          "isCorrect": true
+        },
+        {
+          "text": "Apollo",
+          "isCorrect": false
+        },
+        {
+          "text": "Mars",
+          "isCorrect": false
+        },
+        {
+          "text": "Ares",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which author wrote ''Salem's Lot'?",
+      "answers": [
+        {
+          "text": "Stephen King",
+          "isCorrect": true
+        },
+        {
+          "text": "H. P. Lovecraft",
+          "isCorrect": false
+        },
+        {
+          "text": "Edgar Allan Poe",
+          "isCorrect": false
+        },
+        {
+          "text": "Jack Vance",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Terry Jacks had a one hit wonder in 1974 with which song?",
+      "answers": [
+        {
+          "text": "Seasons in the Sun",
+          "isCorrect": true
+        },
+        {
+          "text": "Genius of Love",
+          "isCorrect": false
+        },
+        {
+          "text": "867-5309 - Jenny",
+          "isCorrect": false
+        },
+        {
+          "text": "Bust a Move",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which author wrote 'The History of Middle-earth'?",
+      "answers": [
+        {
+          "text": "J. R. R. Tolkien",
+          "isCorrect": true
+        },
+        {
+          "text": "G. K. Chesterton",
+          "isCorrect": false
+        },
+        {
+          "text": "Philip Pullman",
+          "isCorrect": false
+        },
+        {
+          "text": "C. S. Lewis",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Who was the first person to be buried at Poets' Corner?",
+      "answers": [
+        {
+          "text": "Geoffrey Chaucer",
+          "isCorrect": true
+        },
+        {
+          "text": "William Shakespeare",
+          "isCorrect": false
+        },
+        {
+          "text": "William Wordsworth",
+          "isCorrect": false
+        },
+        {
+          "text": "John Milton",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "In which country would you find the UNESCO World Heritage site of Mostar?",
+      "answers": [
+        {
+          "text": "Bosnia & Herzegovina",
+          "isCorrect": true
+        },
+        {
+          "text": "Turkey",
+          "isCorrect": false
+        },
+        {
+          "text": "Argentina",
+          "isCorrect": false
+        },
+        {
+          "text": "Estonia",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What Apollo 13 astronaut contacted Mission Control with the words, \"Houston, we've had a problem\"?",
+      "answers": [
+        {
+          "text": "Jack Swigert",
+          "isCorrect": true
+        },
+        {
+          "text": "Buzz Aldrin",
+          "isCorrect": false
+        },
+        {
+          "text": "Sally Ride",
+          "isCorrect": false
+        },
+        {
+          "text": "John Glen",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which British music duo released the song 'Sweet Dreams (Are Made of This)'?",
+      "answers": [
+        {
+          "text": "Eurythmics",
+          "isCorrect": true
+        },
+        {
+          "text": "Level 42",
+          "isCorrect": false
+        },
+        {
+          "text": "Feeder",
+          "isCorrect": false
+        },
+        {
+          "text": "Uriah Heep",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which author wrote 'The Snow Queen'?",
+      "answers": [
+        {
+          "text": "Hans Christian Andersen",
+          "isCorrect": true
+        },
+        {
+          "text": "Beatrix Potter",
+          "isCorrect": false
+        },
+        {
+          "text": "Søren Kierkegaard",
+          "isCorrect": false
+        },
+        {
+          "text": "Oscar Wilde",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What is the plot of the movie Three Billboards Outside Ebbing, Missouri?",
+      "answers": [
+        {
+          "text": "A mother personally challenges the local authorities to solve her daughter's murder.",
+          "isCorrect": true
+        },
+        {
+          "text": "The drug-induced utopias of four addicts are shattered when their addictions run deep.",
+          "isCorrect": false
+        },
+        {
+          "text": "A paleontologist is tasked with protecting two children when cloned dinosaurs are set free.",
+          "isCorrect": false
+        },
+        {
+          "text": "A destitute family builds a symbiotic relationship with a wealthy family.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which animal communicates in sound waves below the frequency that humans can hear?",
+      "answers": [
+        {
+          "text": "Elephants",
+          "isCorrect": true
+        },
+        {
+          "text": "Blue Whales",
+          "isCorrect": false
+        },
+        {
+          "text": "Gorillas",
+          "isCorrect": false
+        },
+        {
+          "text": "Bats",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which author wrote 'The Descent of Man And Selection in Relation to Sex'?",
+      "answers": [
+        {
+          "text": "Charles Darwin",
+          "isCorrect": true
+        },
+        {
+          "text": "Percy Bysshe Shelley",
+          "isCorrect": false
+        },
+        {
+          "text": "H. Rider Haggard",
+          "isCorrect": false
+        },
+        {
+          "text": "Robert Louis Stevenson",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which alternative rock band from the United States released the studio album 'Everything Will Be Alright in the End'?",
+      "answers": [
+        {
+          "text": "Weezer",
+          "isCorrect": true
+        },
+        {
+          "text": "LMFAO",
+          "isCorrect": false
+        },
+        {
+          "text": "Static-X",
+          "isCorrect": false
+        },
+        {
+          "text": "The Black Keys",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Who said 'I have nothing to offer but blood, tears, toil and sweat'?",
+      "answers": [
+        {
+          "text": "Winston Churchill",
+          "isCorrect": true
+        },
+        {
+          "text": "Abraham Lincoln",
+          "isCorrect": false
+        },
+        {
+          "text": "Neil Armstrong",
+          "isCorrect": false
+        },
+        {
+          "text": "Tom Cruise",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What is the word for a young rabbit?",
+      "answers": [
+        {
+          "text": "A Bunny",
+          "isCorrect": true
+        },
+        {
+          "text": "An Elver",
+          "isCorrect": false
+        },
+        {
+          "text": "A Farrow",
+          "isCorrect": false
+        },
+        {
+          "text": "A Tadpole",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which island country lies to the East of Mauritius?",
+      "answers": [
+        {
+          "text": "Australia",
+          "isCorrect": true
+        },
+        {
+          "text": "Hawaii",
+          "isCorrect": false
+        },
+        {
+          "text": "Cuba",
+          "isCorrect": false
+        },
+        {
+          "text": "Madagascar",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "A male sea lion is known as what?",
+      "answers": [
+        {
+          "text": "A Bull",
+          "isCorrect": true
+        },
+        {
+          "text": "A Drone",
+          "isCorrect": false
+        },
+        {
+          "text": "A Tiercel",
+          "isCorrect": false
+        },
+        {
+          "text": "A Rooster",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Name the movie that matches the following plot summary: 'In the slums of Rio, two kids' paths diverge as one becomes a photographer and the other a kingpin.'",
+      "answers": [
+        {
+          "text": "City of God",
+          "isCorrect": true
+        },
+        {
+          "text": "Die Hard",
+          "isCorrect": false
+        },
+        {
+          "text": "Unforgiven",
+          "isCorrect": false
+        },
+        {
+          "text": "A Beautiful Mind",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which author wrote 'The Adventure of the Speckled Band'?",
+      "answers": [
+        {
+          "text": "Arthur Conan Doyle",
+          "isCorrect": true
+        },
+        {
+          "text": "Agatha Christie",
+          "isCorrect": false
+        },
+        {
+          "text": "Oscar Wilde",
+          "isCorrect": false
+        },
+        {
+          "text": "George Orwell",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What color spots has the common ladybird?",
+      "answers": [
+        {
+          "text": "Black",
+          "isCorrect": true
+        },
+        {
+          "text": "White",
+          "isCorrect": false
+        },
+        {
+          "text": "Red",
+          "isCorrect": false
+        },
+        {
+          "text": "Brown",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "The painting \"Girl with a Pearl Earring\" by ‎‎Johannes Vermeer is a part of which art movement?",
+      "answers": [
+        {
+          "text": "Dutch Golden Age",
+          "isCorrect": true
+        },
+        {
+          "text": "Neoclassicism",
+          "isCorrect": false
+        },
+        {
+          "text": "Dutch and Flemish Renaissance",
+          "isCorrect": false
+        },
+        {
+          "text": "Fauvism",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What is the plot of the movie The Usual Suspects?",
+      "answers": [
+        {
+          "text": "A sole survivor tells of the events leading up to a horrific gun battle on a boat.",
+          "isCorrect": true
+        },
+        {
+          "text": "A withdrawn boy who communicates with spirits seeks the help of a child psychologist.",
+          "isCorrect": false
+        },
+        {
+          "text": "Explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+          "isCorrect": false
+        },
+        {
+          "text": "The stepdaughter of a sadistic army officer escapes into an eerie fantasy world.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which English rock band released the studio album 'Wish You Were Here'?",
+      "answers": [
+        {
+          "text": "Pink Floyd",
+          "isCorrect": true
+        },
+        {
+          "text": "Wings",
+          "isCorrect": false
+        },
+        {
+          "text": "Rudimental",
+          "isCorrect": false
+        },
+        {
+          "text": "The Alan Parsons Project",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What is the capital of Saudi Arabia ?",
+      "answers": [
+        {
+          "text": "Riyadh",
+          "isCorrect": true
+        },
+        {
+          "text": "Mecca",
+          "isCorrect": false
+        },
+        {
+          "text": "Medina",
+          "isCorrect": false
+        },
+        {
+          "text": "Jeddah",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
 ]
