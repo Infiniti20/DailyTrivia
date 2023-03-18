@@ -1,20 +1,19 @@
 import { type RequestEvent, type RequestHandler, error } from "@sveltejs/kit";
-import {
-  initializeApp,
-  credential,
-  type ServiceAccount,
-  database,
-} from "firebase-admin";
+import admin from "firebase-admin";
+
+
+
+
 import serviceKey from "../../../../adminSDK.json";
 
-let serviceAccount = serviceKey as ServiceAccount;
+let serviceAccount = serviceKey as admin.ServiceAccount;
 
-const app = initializeApp({
-  credential: credential.cert(serviceAccount),
+const app = admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://dailytrivia-5048b-default-rtdb.firebaseio.com/",
 });
 
-const db = database(app);
+const db = admin.database(app);
 
 type WriteRequest = {
   id: string;
