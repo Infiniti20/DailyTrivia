@@ -104,12 +104,13 @@
       if (!name) {
         return;
       }
-      fetch("/api/writeHighscore", {
+      fetch("/api/database", {
         method: "POST",
         body: JSON.stringify({
           id: data.id,
           name,
           score: gameState.totalPoints,
+          date: new Date().getTime()
         }),
       });
       localStorage.setItem("lastCompleted", new Date().getTime().toString());

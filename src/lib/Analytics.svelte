@@ -1,10 +1,12 @@
 <script lang="ts">
+  import Leaderboard from "./Leaderboard.svelte";
+
   export let score: number | undefined;
   export let wasButton: boolean;
   export let endScreen: boolean;
-  export let name:string;
-  
+  export let name: string;
 
+  let leaderboardShown:boolean = false;
   //! UPDATE THIS TO HAVE MULTIPLE MESSAGES
   let messageRange = [
     "Maybe trivia isn't your thing.",
@@ -39,15 +41,19 @@
 <div class="bg" on:click|self={hideEndScreen}>
   {#if !wasButton}
     <span class="modal">
-      <span class="intro">You got</span>
-      <h1>{score ?? "-"}</h1>
-      {#if score}
-        <span class="message">{getMessage(score)}</span>
+      {#if !leaderboardShown}
+        <span class="intro">You got</span>
+        <h1>{score ?? "-"}</h1>
+        {#if score}
+          <span class="message">{getMessage(score)}</span>
+        {/if}
+        <div class="buttons">
+          <button on:click={()=>{leaderboardShown = true}}>Leaderboard</button>
+          <button class="icon" on:click={share}>Share</button>
+        </div>
+      {:else}
+        <Leaderboard bind:leaderboardShown/>
       {/if}
-      <div class="buttons">
-        <button>Leaderboard</button>
-        <button class="icon" on:click={share}>Share</button>
-      </div>
     </span>
   {:else}
     <span class="modal" />

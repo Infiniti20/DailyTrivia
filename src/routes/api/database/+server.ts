@@ -20,6 +20,7 @@ type WriteRequest = {
   id: string;
   name: string;
   score: number;
+  date: string;
 };
 export const POST: RequestHandler = async ({ request }: RequestEvent) => {
     let body=(await request.json()) as WriteRequest
@@ -32,10 +33,13 @@ export const POST: RequestHandler = async ({ request }: RequestEvent) => {
  }
   const name = body.name;
   const score = body.score
+  const time = new Date(parseInt(body.date)).setHours(0,0,0,0);
+
 
   db.ref(`/score/${id}`).set({
     name,
     score,
+    time
   });
 
   return new Response(
@@ -55,3 +59,16 @@ export const PUT: RequestHandler = async ({ request }: RequestEvent) => {
     })
   );
 };
+
+export const GET: RequestHandler = async ({url})=>{
+  const timeStamp = new Date(parseInt(url.searchParams.get("t") ?? new Date().getTime().toString())).setHours(0,0,0,0)
+  console.log(timeStamp)
+  let data = await (db.ref("score").orderByChild("time").equalTo(timeStamp).get())
+   return new Response(
+     JSON.stringify({
+       data
+     })
+   );
+  
+}
+
