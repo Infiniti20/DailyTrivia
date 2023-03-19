@@ -4,6 +4,7 @@
 
   const time = parseInt($page.url.searchParams.get("t") ?? "0");
   const name = $page.url.searchParams.get("n") ?? "I"
+  console.log(time, name)
   function navigate() {
     goto("/")
   }
@@ -23,7 +24,7 @@
 
   <meta
     property="og:image"
-    content="https://rest.apitemplate.io/05077b2383303bea@CziFDL5Y/image.png?score.text={time}&name.text={`${name} scored`}"
+    content="https://rest.apitemplate.io/05077b2383303bea@CziFDL5Y/image.png}&score.text={time}"
   />
 </svelte:head>
 <div>Loading, hang on</div>

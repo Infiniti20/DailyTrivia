@@ -11,7 +11,7 @@
     let res: leaderboard = await (
       await (await fetch(`/api/database?t=${new Date().getTime()}`)).json()
     ).data;
-    let sortedBoard = Object.values(res).sort((a, b) => a.score - b.score);
+    let sortedBoard = Object.values(res).sort((a, b) => b.score - a.score);
     return sortedBoard;
   }
 

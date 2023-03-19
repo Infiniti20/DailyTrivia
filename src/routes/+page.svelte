@@ -47,7 +47,6 @@
   }
   onMount(async () => {
     let offset = calculateDays(new Date("3/17/2023") , new Date())
-    console.log(offset)
     questions = (await (await fetch(`/api/getTrivia?offset=${offset}`)).json())
       .questions;
     let date2 = new Date();
@@ -57,7 +56,9 @@
           new Date("1965").getTime().toString()
       )
     );
+		date1.setHours(0,0,0,0)
     let days = calculateDays(date1, date2);
+		console.log(days)
 
     if (days < 1) {
       gameState.totalPoints = parseInt(

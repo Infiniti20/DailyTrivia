@@ -39,7 +39,7 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="bg" on:click|self={hideEndScreen}>
-  {#if !wasButton}
+  <!-- {#if !wasButton} -->
     <span class="modal">
       {#if !leaderboardShown}
         <span class="intro">You got</span>
@@ -55,9 +55,9 @@
         <Leaderboard bind:leaderboardShown/>
       {/if}
     </span>
-  {:else}
-    <span class="modal" />
-  {/if}
+  <!-- {:else}
+    <span class="modal" /> -->
+  <!-- {/if} -->
 </div>
 
 <style>
