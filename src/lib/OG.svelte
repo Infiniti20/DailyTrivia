@@ -1,5 +1,4 @@
 <script lang="ts">
-      import { page } from '$app/stores'
 
     export let name:string = "I"
     export let score:number = 100

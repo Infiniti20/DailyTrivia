@@ -10,13 +10,13 @@ import Card from "../../../lib/OG.svelte"
 
 
 export const GET: RequestHandler = async ({ request, params, url }: RequestEvent) => {
-  const result = (Card as any).render({score:url.searchParams.get("s") ?? undefined, name:url.searchParams.get("n") ?? undefined})
+  const result = (Card as any).render({score:500, name:"kieran"})
 const element = toReactNode(`${result.html}<style>${result.css.code}</style>`);
 
 const svg = await satori(element, {
   fonts: [
     {
-      name: "Anton",
+      name: "Noto Sans",
       // Use `fs` (Node.js only) or `fetch` to read the font as Buffer/ArrayBuffer and provide `data` here.
       data: Buffer.from(Anton),
       style: "normal",

@@ -24,7 +24,7 @@
 
   <meta
     property="og:image"
-    content="https://rest.apitemplate.io/05077b2383303bea@CziFDL5Y/image.png}&score.text={time}"
+    content="/api/og"
   />
 </svelte:head>
 <div>Loading, hang on</div>
