@@ -1,5 +1,5 @@
 <script lang="ts">
-    export let leaderboardShown;
+  export let leaderboardShown;
   interface leaderboard {
     [id: string]: {
       name: string;
@@ -16,29 +16,34 @@
   }
 
   let promise = getLeaderBoard();
+  let dateSplit = new Date().toDateString().split(" ");
+  let date = [dateSplit[0], dateSplit[1] + " " + dateSplit[2]].join(", ");
 </script>
 
 {#await promise}
   Loading
 {:then leaderboardData}
+  <span class="title"><b>{date}</b></span>
   <div class="grid">
     <div class="row no-border">
-              <span><b>Rank</b></span>
+      <span><b>Rank</b></span>
 
       <span><b>Name</b></span>
       <span><b>Score</b></span>
     </div>
     {#each leaderboardData as person, index}
       <div class="row">
-        <span>{index+1}</span>
+        <span>{index + 1}</span>
         <span>{person.name}</span>
         <span>{person.score}</span>
       </div>
     {/each}
   </div>
-  <button on:click={()=>{
-    leaderboardShown=false
-  }}>Back</button>
+  <button
+    on:click={() => {
+      leaderboardShown = false;
+    }}>Back</button
+  >
 {/await}
 
 <style>
@@ -47,6 +52,8 @@
     padding: 20px;
     padding-top: 0px;
     overflow-y: scroll;
+    margin-bottom: 20px;
+    width: 300px;
   }
   .row {
     display: grid;
@@ -81,5 +88,9 @@
     border-radius: 5px;
     border: 1px solid #333333;
     outline: none;
+  }
+  .title {
+    font-size: 20px;
+    text-align: left;
   }
 </style>

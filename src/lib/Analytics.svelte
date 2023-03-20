@@ -2,7 +2,6 @@
   import Leaderboard from "./Leaderboard.svelte";
 
   export let score: number | undefined;
-  export let wasButton: boolean;
   export let endScreen: boolean;
   export let name: string;
 
@@ -32,7 +31,7 @@
     navigator.share({
       url: `/share?t=${score}&n=${name}`,
       title: "Daily Trivia",
-      text: `I completed Daily Trivia with ${score} points`,
+      text: `I completed Daily Trivia with ${name ?? (localStorage.getItem("name") ?? "I")} points`,
     });
   }
 </script>
@@ -71,7 +70,7 @@
     place-items: center;
   }
   .modal {
-    padding: 30px;
+    padding: 25px;
     background-color: white;
     border-radius: 5px;
     display: block;

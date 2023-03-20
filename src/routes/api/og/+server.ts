@@ -10,7 +10,7 @@ import Card from "../../../lib/OG.svelte"
 
 
 export const GET: RequestHandler = async ({ request, params, url }: RequestEvent) => {
-  const result = (Card as any).render({score:500, name:"kieran"})
+  const result = (Card as any).render({score:url.searchParams.get("s"), name:url.searchParams.get("n")})
 const element = toReactNode(`${result.html}<style>${result.css.code}</style>`);
 
 const svg = await satori(element, {
