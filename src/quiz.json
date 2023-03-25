@@ -1029,7 +1029,7 @@
     ]
   },
   {
-    "questionText": "Which author wrote 'The Descent of Man, and Selection in Relation to Sex'?",
+    "questionText": "Which author wrote 'The Descent of Man'?",
     "answers": [
       {
         "text": "Charles Darwin",
@@ -1827,7 +1827,7 @@
     ]
   },
   {
-    "questionText": "Which author wrote 'The Descent of Man And Selection in Relation to Sex'?",
+    "questionText": "Which author wrote 'The Descent of Man'?",
     "answers": [
       {
         "text": "Charles Darwin",
@@ -3064,5 +3064,1056 @@
         ]
       }
     ]
-  }
+  },
+    {
+      "questionText": "Who was the 42nd president of the USA, in term during the period 1993–2001?",
+      "answers": [
+        {
+          "text": "William J. Clinton",
+          "isCorrect": true
+        },
+        {
+          "text": "Rutherford B. Hayes",
+          "isCorrect": false
+        },
+        {
+          "text": "Woodrow Wilson",
+          "isCorrect": false
+        },
+        {
+          "text": "Dwight Eisenhower",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Where did the Bay Of Pigs Invasion take place?",
+      "answers": [
+        {
+          "text": "Cuba",
+          "isCorrect": true
+        },
+        {
+          "text": "Australia",
+          "isCorrect": false
+        },
+        {
+          "text": "India",
+          "isCorrect": false
+        },
+        {
+          "text": "France",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which film contains the character 'Rose Sayer'?",
+      "answers": [
+        {
+          "text": "The African Queen",
+          "isCorrect": true
+        },
+        {
+          "text": "Midnight Cowboy",
+          "isCorrect": false
+        },
+        {
+          "text": "Raiders of the Lost Ark",
+          "isCorrect": false
+        },
+        {
+          "text": "Ghost",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which film won the Academy Award for Best Picture in 1973?",
+      "answers": [
+        {
+          "text": "The Sting",
+          "isCorrect": true
+        },
+        {
+          "text": "American Graffiti",
+          "isCorrect": false
+        },
+        {
+          "text": "Cries and Whispers",
+          "isCorrect": false
+        },
+        {
+          "text": "The Exorcist",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which of these is a popular drink in Panama?",
+      "answers": [
+        {
+          "text": "Seco Herrerano",
+          "isCorrect": true
+        },
+        {
+          "text": "Tequila",
+          "isCorrect": false
+        },
+        {
+          "text": "Nsafufuo",
+          "isCorrect": false
+        },
+        {
+          "text": "Unicum",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which of these colors would you find on the flag of Norway?",
+      "answers": [
+        {
+          "text": "Red",
+          "isCorrect": true
+        },
+        {
+          "text": "Green",
+          "isCorrect": false
+        },
+        {
+          "text": "Gold",
+          "isCorrect": false
+        },
+        {
+          "text": "Orange",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "How Many Colonies Signed The American Declaration Of Independence?",
+      "answers": [
+        {
+          "text": "13",
+          "isCorrect": true
+        },
+        {
+          "text": "4",
+          "isCorrect": false
+        },
+        {
+          "text": "50",
+          "isCorrect": false
+        },
+        {
+          "text": "49",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which of these countries borders Mexico?",
+      "answers": [
+        {
+          "text": "Belize",
+          "isCorrect": true
+        },
+        {
+          "text": "El Salvador",
+          "isCorrect": false
+        },
+        {
+          "text": "Honduras",
+          "isCorrect": false
+        },
+        {
+          "text": "Nicaragua",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "The language 'Deccan' belongs to which language family?",
+      "answers": [
+        {
+          "text": "Indo-European",
+          "isCorrect": true
+        },
+        {
+          "text": "Uralic",
+          "isCorrect": false
+        },
+        {
+          "text": "Niger–Congo",
+          "isCorrect": false
+        },
+        {
+          "text": "Austroasiatic",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What Is The World's Most Northerly Capital City?",
+      "answers": [
+        {
+          "text": "Reykjavik",
+          "isCorrect": true
+        },
+        {
+          "text": "Ontario",
+          "isCorrect": false
+        },
+        {
+          "text": "Moscow",
+          "isCorrect": false
+        },
+        {
+          "text": "Helsinki",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "A Tagine Is A Dish That Originated In Which Country?",
+      "answers": [
+        {
+          "text": "Morocco ",
+          "isCorrect": true
+        },
+        {
+          "text": "Italy",
+          "isCorrect": false
+        },
+        {
+          "text": "France",
+          "isCorrect": false
+        },
+        {
+          "text": "Brazil",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "In Portuguese, what is the word for for 'blue'?",
+      "answers": [
+        {
+          "text": "Azul",
+          "isCorrect": true
+        },
+        {
+          "text": "Bleu",
+          "isCorrect": false
+        },
+        {
+          "text": "Azuro",
+          "isCorrect": false
+        },
+        {
+          "text": "Três",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which actor played the role of Blondie in The Good, the Bad, and the Ugly?",
+      "answers": [
+        {
+          "text": "Clint Eastwood",
+          "isCorrect": true
+        },
+        {
+          "text": "James Cagney",
+          "isCorrect": false
+        },
+        {
+          "text": "Marlon Brando",
+          "isCorrect": false
+        },
+        {
+          "text": "Harrison Ford",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "In which country would you find Uluru?",
+      "answers": [
+        {
+          "text": "Australia",
+          "isCorrect": true
+        },
+        {
+          "text": "India",
+          "isCorrect": false
+        },
+        {
+          "text": "South Africa",
+          "isCorrect": false
+        },
+        {
+          "text": "Mexico",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "The language 'Kazakh' belongs to which language family?",
+      "answers": [
+        {
+          "text": "Turkic",
+          "isCorrect": true
+        },
+        {
+          "text": "Japonic",
+          "isCorrect": false
+        },
+        {
+          "text": "Indo-European",
+          "isCorrect": false
+        },
+        {
+          "text": "Austroasiatic",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Who Was Inspired By An Apple Falling?",
+      "answers": [
+        {
+          "text": "Isaac Newton",
+          "isCorrect": true
+        },
+        {
+          "text": "Charles Darwin",
+          "isCorrect": false
+        },
+        {
+          "text": "Archimedes",
+          "isCorrect": false
+        },
+        {
+          "text": "Ernest Rutherford",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Who won the 1991 Academy Award for Best Supporting Actor for playing the role of Curly in City Slickers?",
+      "answers": [
+        {
+          "text": "Jack Palance",
+          "isCorrect": true
+        },
+        {
+          "text": "Tommy Lee Jones",
+          "isCorrect": false
+        },
+        {
+          "text": "Harvey Keitel",
+          "isCorrect": false
+        },
+        {
+          "text": "Ben Kingsley",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Name the movie that matches the following plot summary: 'On a journey to find the cure for a curse, a boy finds himself in the middle of a war.'",
+      "answers": [
+        {
+          "text": "Princess Mononoke",
+          "isCorrect": true
+        },
+        {
+          "text": "The Shining",
+          "isCorrect": false
+        },
+        {
+          "text": "Inception",
+          "isCorrect": false
+        },
+        {
+          "text": "Blade Runner",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which of these dishes is most associated with Bahrain?",
+      "answers": [
+        {
+          "text": "Chicken Machboos",
+          "isCorrect": true
+        },
+        {
+          "text": "Ambuyat",
+          "isCorrect": false
+        },
+        {
+          "text": "Pepperpot",
+          "isCorrect": false
+        },
+        {
+          "text": "Pho",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which song begins with the lyrics: \"Hello? Is there anybody in there?\"?",
+      "answers": [
+        {
+          "text": "\"Comfortably Numb\" by Pink Floyd",
+          "isCorrect": true
+        },
+        {
+          "text": "\"Rapper's Delight\" by Sugarhill Gang",
+          "isCorrect": false
+        },
+        {
+          "text": "\"Welcome to the Black Parade\" by My Chemical Romance",
+          "isCorrect": false
+        },
+        {
+          "text": "\"Baby Got Back\" by Sir Mix-a-Lot",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Over 75% of the Earth's surface is covered by some form of _____.",
+      "answers": [
+        {
+          "text": "Water",
+          "isCorrect": true
+        },
+        {
+          "text": "Salt",
+          "isCorrect": false
+        },
+        {
+          "text": "Foliage",
+          "isCorrect": false
+        },
+        {
+          "text": "Human Settlement",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which actor has featured in films including Life of Pi and Cyrano de Bergerac?",
+      "answers": [
+        {
+          "text": "Gérard Depardieu",
+          "isCorrect": true
+        },
+        {
+          "text": "Kevin Costner",
+          "isCorrect": false
+        },
+        {
+          "text": "Shah Rukh Khan",
+          "isCorrect": false
+        },
+        {
+          "text": "Jack Nicholson",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which film won the Academy Award for Best Picture in 1971?",
+      "answers": [
+        {
+          "text": "The French Connection",
+          "isCorrect": true
+        },
+        {
+          "text": "A Clockwork Orange",
+          "isCorrect": false
+        },
+        {
+          "text": "Fiddler on the Roof",
+          "isCorrect": false
+        },
+        {
+          "text": "The Last Picture Show",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "In Greek mythology, who was Medea's husband?",
+      "answers": [
+        {
+          "text": "Jason",
+          "isCorrect": true
+        },
+        {
+          "text": "Kevin",
+          "isCorrect": false
+        },
+        {
+          "text": "Jeff",
+          "isCorrect": false
+        },
+        {
+          "text": "Chris",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What is the Portuguese word for 'seven'?",
+      "answers": [
+        {
+          "text": "Sete",
+          "isCorrect": true
+        },
+        {
+          "text": "Sieben",
+          "isCorrect": false
+        },
+        {
+          "text": "Sept",
+          "isCorrect": false
+        },
+        {
+          "text": "Dois",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What was the name of the pandemic which killed over 1% of the world's population in 1918?",
+      "answers": [
+        {
+          "text": "Spanish Flu",
+          "isCorrect": true
+        },
+        {
+          "text": "Swine Flu",
+          "isCorrect": false
+        },
+        {
+          "text": "SARS",
+          "isCorrect": false
+        },
+        {
+          "text": "Coronavirus",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which film contains the character 'Dil'?",
+      "answers": [
+        {
+          "text": "The Crying Game",
+          "isCorrect": true
+        },
+        {
+          "text": "Sunset Boulevard",
+          "isCorrect": false
+        },
+        {
+          "text": "Bringing Up Baby",
+          "isCorrect": false
+        },
+        {
+          "text": "A Clockwork Orange",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "In Italian, what is the meaning of the word 'nove'?",
+      "answers": [
+        {
+          "text": "Nine",
+          "isCorrect": true
+        },
+        {
+          "text": "Four",
+          "isCorrect": false
+        },
+        {
+          "text": "Black",
+          "isCorrect": false
+        },
+        {
+          "text": "Two",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What was the name of the B-29 used at Hiroshima to drop the bomb?",
+      "answers": [
+        {
+          "text": "Enola Gay",
+          "isCorrect": true
+        },
+        {
+          "text": "Big Boy",
+          "isCorrect": false
+        },
+        {
+          "text": "Lady Diamond",
+          "isCorrect": false
+        },
+        {
+          "text": "Dauntless",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "The song 'Landslide' had a well-known cover by Miley Cyrus, but who recorded the original?",
+      "answers": [
+        {
+          "text": "Fleetwood Mac",
+          "isCorrect": true
+        },
+        {
+          "text": "The Highwomen",
+          "isCorrect": false
+        },
+        {
+          "text": "Joe Cocker",
+          "isCorrect": false
+        },
+        {
+          "text": "the Light by Manfred Mann's Earth Band",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which American alternative rock band released the studio album 'New Adventures in Hi-Fi'?",
+      "answers": [
+        {
+          "text": "R.E.M.",
+          "isCorrect": true
+        },
+        {
+          "text": "Counting Crows",
+          "isCorrect": false
+        },
+        {
+          "text": "Three 6 Mafia",
+          "isCorrect": false
+        },
+        {
+          "text": "The Velvet Underground",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "In which country would you find the city of Saint Petersburg?",
+      "answers": [
+        {
+          "text": "Russia",
+          "isCorrect": true
+        },
+        {
+          "text": "Bosnia & Herzegovina",
+          "isCorrect": false
+        },
+        {
+          "text": "Greece",
+          "isCorrect": false
+        },
+        {
+          "text": "Sweden",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Who Invented The Steam Engine?",
+      "answers": [
+        {
+          "text": "James Watt",
+          "isCorrect": true
+        },
+        {
+          "text": "Benjamin Franklin",
+          "isCorrect": false
+        },
+        {
+          "text": "Eli Whitney",
+          "isCorrect": false
+        },
+        {
+          "text": "Marcus Steam",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "In Which Indian City Is The Taj Mahal",
+      "answers": [
+        {
+          "text": "Agra",
+          "isCorrect": true
+        },
+        {
+          "text": "Mumbai",
+          "isCorrect": false
+        },
+        {
+          "text": "Kolkata",
+          "isCorrect": false
+        },
+        {
+          "text": "Chennai",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What is the capital city of Gabon?",
+      "answers": [
+        {
+          "text": "Libreville",
+          "isCorrect": true
+        },
+        {
+          "text": "Maseru",
+          "isCorrect": false
+        },
+        {
+          "text": "Dodoma",
+          "isCorrect": false
+        },
+        {
+          "text": "Maputo",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which of these cities is in Australia?",
+      "answers": [
+        {
+          "text": "Brisbane",
+          "isCorrect": true
+        },
+        {
+          "text": "Queenstown",
+          "isCorrect": false
+        },
+        {
+          "text": "Auckland",
+          "isCorrect": false
+        },
+        {
+          "text": "Christchurch",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which American heavy metal band released the studio album 'Load'?",
+      "answers": [
+        {
+          "text": "Metallica",
+          "isCorrect": true
+        },
+        {
+          "text": "Alice Cooper",
+          "isCorrect": false
+        },
+        {
+          "text": "The Pussycat Dolls",
+          "isCorrect": false
+        },
+        {
+          "text": "Three 6 Mafia",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which action star has featured in both Terminator and Predator?",
+      "answers": [
+        {
+          "text": "Arnold Schwarzenegger",
+          "isCorrect": true
+        },
+        {
+          "text": "Sylvester Stallone",
+          "isCorrect": false
+        },
+        {
+          "text": "Jason Statham",
+          "isCorrect": false
+        },
+        {
+          "text": "Chuck Norris",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "In which book does 'Ali Baba' appear?",
+      "answers": [
+        {
+          "text": "One Thousand and One Nights",
+          "isCorrect": true
+        },
+        {
+          "text": "Charlotte's Web",
+          "isCorrect": false
+        },
+        {
+          "text": "Alice's Adventures in Wonderland",
+          "isCorrect": false
+        },
+        {
+          "text": "The Snow Queen",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which English rock band released the studio album 'Three Imaginary Boys'?",
+      "answers": [
+        {
+          "text": "The Cure",
+          "isCorrect": true
+        },
+        {
+          "text": "Level 42",
+          "isCorrect": false
+        },
+        {
+          "text": "Deep Purple",
+          "isCorrect": false
+        },
+        {
+          "text": "Snow Patrol",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which artificial material was first used commercially in 1938?",
+      "answers": [
+        {
+          "text": "Nylon",
+          "isCorrect": true
+        },
+        {
+          "text": "Latex",
+          "isCorrect": false
+        },
+        {
+          "text": "Kevlar",
+          "isCorrect": false
+        },
+        {
+          "text": "Lycra",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which philosopher famously said 'Happiness is not an ideal of reason but of imagination'?",
+      "answers": [
+        {
+          "text": "Immanuel Kant",
+          "isCorrect": true
+        },
+        {
+          "text": "Baruch Spinoza",
+          "isCorrect": false
+        },
+        {
+          "text": "Ludwig Wittgenstein",
+          "isCorrect": false
+        },
+        {
+          "text": "Protagoras",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which American country rock band released the song 'Hotel California'?",
+      "answers": [
+        {
+          "text": "Eagles",
+          "isCorrect": true
+        },
+        {
+          "text": "The Pussycat Dolls",
+          "isCorrect": false
+        },
+        {
+          "text": "Three 6 Mafia",
+          "isCorrect": false
+        },
+        {
+          "text": "The Velvet Underground",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "In 1979 which English art historian was exposed as a one-time Soviet spy and stripped of his knighthood?",
+      "answers": [
+        {
+          "text": "Anthony Blunt",
+          "isCorrect": true
+        },
+        {
+          "text": "Frank Johnson",
+          "isCorrect": false
+        },
+        {
+          "text": "Christopher Linberg",
+          "isCorrect": false
+        },
+        {
+          "text": "Harold Walker",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "When did Alan Turing break the Enigma code?",
+      "answers": [
+        {
+          "text": "1945",
+          "isCorrect": true
+        },
+        {
+          "text": "1921",
+          "isCorrect": false
+        },
+        {
+          "text": "1880",
+          "isCorrect": false
+        },
+        {
+          "text": "1972",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "The Character Of Mike Myers Features Heavily In Which Series Of Horror Movies?",
+      "answers": [
+        {
+          "text": "Halloween",
+          "isCorrect": true
+        },
+        {
+          "text": "A Nightmare on Elm Street",
+          "isCorrect": false
+        },
+        {
+          "text": "Scream",
+          "isCorrect": false
+        },
+        {
+          "text": "Child's Play",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which word is defined as 'adin a left-handed or contrary direction; counterclockwise'?",
+      "answers": [
+        {
+          "text": "Widdershins",
+          "isCorrect": true
+        },
+        {
+          "text": "Borborygmus",
+          "isCorrect": false
+        },
+        {
+          "text": "Meldrop",
+          "isCorrect": false
+        },
+        {
+          "text": "Kakorrhaphiophobia",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What is Geology the study of?",
+      "answers": [
+        {
+          "text": "the Earth",
+          "isCorrect": true
+        },
+        {
+          "text": "is concerned with earth materials that can be utilized for economic and/or industrial purposes",
+          "isCorrect": false
+        },
+        {
+          "text": "pollen",
+          "isCorrect": false
+        },
+        {
+          "text": "gemstones and ornamental materials",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which of these Latin phrases means 'Let them hate so long as they fear'?",
+      "answers": [
+        {
+          "text": "Oderint dum metuant",
+          "isCorrect": true
+        },
+        {
+          "text": "Tendit in ardua virtus",
+          "isCorrect": false
+        },
+        {
+          "text": "Adversus solem ne loquitor",
+          "isCorrect": false
+        },
+        {
+          "text": "Audere est faucere",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Who ruled Rome when Christ was born?",
+      "answers": [
+        {
+          "text": "Augustus Caesar",
+          "isCorrect": true
+        },
+        {
+          "text": "Pontius Pilate",
+          "isCorrect": false
+        },
+        {
+          "text": "Tiberius",
+          "isCorrect": false
+        },
+        {
+          "text": "Caligula",
+          "isCorrect": false
+        }
+      ]
+    }
+  
 ]

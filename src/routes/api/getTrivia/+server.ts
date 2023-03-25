@@ -46,7 +46,7 @@ function generateQuestions(dayOffset: string) {
   for (let i = 0; i < 5; i++) {
     let question =
       quizData[
-      transformRange(mulberry(), { min: 0, max: 1 }, { min: 0, max: 200 })
+      transformRange(mulberry(), { min: 0, max: 1 }, { min: 0, max: 250 })
     ];
     questions.push(question);
   }
