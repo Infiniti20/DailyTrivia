@@ -33,7 +33,7 @@
     {/if}
   </form>
   {#if leaderboard}
-  <Analytics leaderboardShown={true} endScreen={true} score={0} name={""}></Analytics>
+  <Analytics leaderboardShown={true} endScreen score={0} name={""} handleBack={()=>{leaderboard = false}}></Analytics>
   {/if}
 </div>
 

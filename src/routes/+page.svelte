@@ -76,8 +76,6 @@
       );
       gameState.countdown = 10;
       endScreen = true;
-    } else{
-      gameState.questionIndex = 0;
     }
   });
 

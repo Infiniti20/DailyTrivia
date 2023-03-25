@@ -1,5 +1,8 @@
 <script lang="ts">
   export let leaderboardShown;
+  export let handleBack = () => {
+    leaderboardShown = false;
+  };
   interface leaderboard {
     [id: string]: {
       name: string;
@@ -39,11 +42,7 @@
       </div>
     {/each}
   </div>
-  <button
-    on:click={() => {
-      leaderboardShown = false;
-    }}>Back</button
-  >
+  <button on:click={handleBack}>Back</button>
 {/await}
 
 <style>
@@ -57,7 +56,7 @@
   }
   .row {
     display: grid;
-   grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 33% 33% 33%;
     border-top: 1px solid #dad8d8;
     padding: 5px 0 5px 0;
   }

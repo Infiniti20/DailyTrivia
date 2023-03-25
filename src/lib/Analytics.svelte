@@ -6,6 +6,7 @@
   export let name: string;
 
   export let leaderboardShown:boolean = false;
+  export let handleBack:any = undefined;
   //! UPDATE THIS TO HAVE MULTIPLE MESSAGES
   let messageRange = [
     "Maybe trivia isn't your thing.",
@@ -51,7 +52,7 @@
           <button class="icon" on:click={share}>Share</button>
         </div>
       {:else}
-        <Leaderboard leaderboardShown/>
+        <Leaderboard bind:leaderboardShown {handleBack}/>
       {/if}
     </span>
   <!-- {:else}
