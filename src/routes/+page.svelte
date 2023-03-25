@@ -9,11 +9,10 @@
   import Fingerprinter from "$lib/Fingerprinter.svelte";
 
   export let data;
-  
 
   let questions: Question[];
   let endScreen: boolean = false;
-  let fingerprint:number;
+  let fingerprint: number;
 
   let timer = new Timer();
   let interval: NodeJS.Timer;
@@ -47,9 +46,10 @@
     return days;
   }
   onMount(async () => {
-    let offset = calculateDays(new Date("3/17/2023") , new Date())
-    questions = (await (await fetch(`/api/getTrivia?offset=${offset + 1}`)).json())
-      .questions;
+    let offset = calculateDays(new Date("3/17/2023"), new Date());
+    questions = (
+      await (await fetch(`/api/getTrivia?offset=${offset + 1}`)).json()
+    ).questions;
     let date2 = new Date();
     let date1 = new Date(
       parseInt(
@@ -57,9 +57,9 @@
           new Date("1965").getTime().toString()
       )
     );
-		date1.setHours(0,0,0,0)
+    date1.setHours(0, 0, 0, 0);
     let days = calculateDays(date1, date2);
-		console.log(days)
+    console.log(days);
 
     if (days < 1) {
       gameState.totalPoints = parseInt(
@@ -99,7 +99,6 @@
   function handleNext() {
     gameState.questionIndex++;
     if (gameState.questionIndex >= questions.length) {
-      
       endScreen = true;
       if (!name) {
         return;
@@ -111,11 +110,11 @@
           name,
           score: gameState.totalPoints,
           date: new Date().getTime(),
-          fingerprint
+          fingerprint,
         }),
       });
       localStorage.setItem("lastCompleted", new Date().getTime().toString());
-      localStorage.removeItem("index")
+      localStorage.removeItem("index");
       localStorage.setItem("lastScore", gameState.totalPoints.toString());
       return;
     }
@@ -133,10 +132,20 @@
     ["20px", "20px 20px 20px 0", "0 20px 20px 20px", "0 20px 20px 0"],
   ];
 </script>
-<svelte:window on:beforeunload={()=>{
-  localStorage.setItem("index", gameState.questionIndex.toString())
-}}/>
-<Fingerprinter bind:fingerprint></Fingerprinter>
+
+<svelte:window
+  on:beforeunload={() => {
+    if (
+      gameState.questionIndex < questions.length &&
+      gameState.questionIndex > -1
+    ) {
+      localStorage.setItem("index", gameState.questionIndex.toString());
+      return;
+    }
+    localStorage.removeItem("index");
+  }}
+/>
+<Fingerprinter bind:fingerprint />
 {#if gameState?.hasStarted ?? false}
   {#if gameState.answers}
     <div class="main">
