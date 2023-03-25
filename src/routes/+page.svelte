@@ -136,7 +136,7 @@
 <svelte:window
   on:beforeunload={() => {
     if (
-      gameState.questionIndex < questions.length &&
+      gameState.questionIndex <  (questions.length-1) &&
       gameState.questionIndex > -1
     ) {
       localStorage.setItem("index", gameState.questionIndex.toString());
