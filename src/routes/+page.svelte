@@ -19,7 +19,7 @@
   let interval: NodeJS.Timer;
   //@ts-ignore
   let gameState: GameState = {
-    questionIndex: -1,
+    questionIndex: parseInt(localStorage.getItem("index") ?? "-1"),
     totalPoints: 0,
   };
   let name: string;
@@ -132,7 +132,9 @@
     ["20px", "20px 20px 20px 0", "0 20px 20px 20px", "0 20px 20px 0"],
   ];
 </script>
-
+<svelte:window on:beforeunload={()=>{
+  localStorage.setItem("index", gameState.questionIndex.toString())
+}}/>
 <Fingerprinter bind:fingerprint></Fingerprinter>
 {#if gameState?.hasStarted ?? false}
   {#if gameState.answers}
