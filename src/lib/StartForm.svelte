@@ -1,8 +1,11 @@
 <script lang="ts">
+  import Analytics from "./Analytics.svelte";
+
   export let name: string;
   export let handleSubmit = () => {};
 
   let nameBind: string;
+  let leaderboard: boolean = false;
 
   let localStorageName = localStorage.getItem("name");
   if (localStorageName !== null) {
@@ -20,10 +23,18 @@
       handleSubmit();
     }}
   >
-      <input type="text" bind:value={nameBind} placeholder="Nickname" />
-      <br />
+    <input type="text" bind:value={nameBind} placeholder="Nickname" />
+    <br />
     <button type="submit">Enter Game</button>
+    {#if !localStorage.length}
+      <button class="inverse" on:click|preventDefault={()=>{
+        leaderboard = true;
+      }}>Leaderboard</button>
+    {/if}
   </form>
+  {#if leaderboard}
+  <Analytics leaderboardShown={true} endScreen={true} score={0} name={""}></Analytics>
+  {/if}
 </div>
 
 <style>
@@ -47,5 +58,9 @@
     cursor: pointer;
     background-color: #333333;
     color: white;
+  }
+  .inverse{
+    background-color: white;
+    color: #333333;
   }
 </style>

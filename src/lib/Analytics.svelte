@@ -5,7 +5,7 @@
   export let endScreen: boolean;
   export let name: string;
 
-  let leaderboardShown:boolean = false;
+  export let leaderboardShown:boolean = false;
   //! UPDATE THIS TO HAVE MULTIPLE MESSAGES
   let messageRange = [
     "Maybe trivia isn't your thing.",
@@ -51,7 +51,7 @@
           <button class="icon" on:click={share}>Share</button>
         </div>
       {:else}
-        <Leaderboard bind:leaderboardShown/>
+        <Leaderboard leaderboardShown/>
       {/if}
     </span>
   <!-- {:else}
