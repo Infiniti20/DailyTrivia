@@ -6,13 +6,14 @@
   import NavBar from "$lib/NavBar.svelte";
   import StartForm from "$lib/StartForm.svelte";
   import Analytics from "$lib/Analytics.svelte";
+  import Fingerprinter from "$lib/Fingerprinter.svelte";
 
   export let data;
-  console.log(data.id);
+  
 
   let questions: Question[];
   let endScreen: boolean = false;
-  let wasButton: boolean;
+  let fingerprint:number;
 
   let timer = new Timer();
   let interval: NodeJS.Timer;
@@ -47,7 +48,7 @@
   }
   onMount(async () => {
     let offset = calculateDays(new Date("3/17/2023") , new Date())
-    questions = (await (await fetch(`/api/getTrivia?offset=${offset}`)).json())
+    questions = (await (await fetch(`/api/getTrivia?offset=${offset + 1}`)).json())
       .questions;
     let date2 = new Date();
     let date1 = new Date(
@@ -92,16 +93,14 @@
   }
 
   function handleAnalytics() {
-    wasButton = gameState.questionIndex >= questions.length ? false : true;
     endScreen = true;
   }
 
   function handleNext() {
     gameState.questionIndex++;
     if (gameState.questionIndex >= questions.length) {
-      console.log("hita thge");
+      
       endScreen = true;
-      wasButton = false;
       if (!name) {
         return;
       }
@@ -111,7 +110,8 @@
           id: data.id,
           name,
           score: gameState.totalPoints,
-          date: new Date().getTime()
+          date: new Date().getTime(),
+          fingerprint
         }),
       });
       localStorage.setItem("lastCompleted", new Date().getTime().toString());
@@ -133,6 +133,7 @@
   ];
 </script>
 
+<Fingerprinter bind:fingerprint></Fingerprinter>
 {#if gameState?.hasStarted ?? false}
   {#if gameState.answers}
     <div class="main">
@@ -159,7 +160,7 @@
   <StartForm bind:name {handleSubmit} />
 {/if}
 {#if endScreen}
-  <Analytics score={gameState.totalPoints} {wasButton} bind:endScreen {name} />
+  <Analytics score={gameState.totalPoints} bind:endScreen {name} />
 {/if}
 
 <style>

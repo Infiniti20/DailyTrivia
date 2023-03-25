@@ -29,9 +29,9 @@
 
   function share() {
     navigator.share({
-      url: `/share?t=${score}&n=${name}`,
+      url: `/share?t=${score}&n=${name ?? (localStorage.getItem("name") ?? "I")}`,
       title: "Daily Trivia",
-      text: `I completed Daily Trivia with ${name ?? (localStorage.getItem("name") ?? "I")} points`,
+      text: `I completed Daily Trivia with ${score} points`,
     });
   }
 </script>

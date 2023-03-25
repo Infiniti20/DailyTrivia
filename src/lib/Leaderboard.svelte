@@ -57,8 +57,7 @@
   }
   .row {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 40px;
+   grid-template-columns: 33% 33% 33%;
     border-top: 1px solid #dad8d8;
     padding: 5px 0 5px 0;
   }

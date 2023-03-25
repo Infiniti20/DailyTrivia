@@ -24,7 +24,7 @@
 
   <meta
     property="og:image"
-    content="/api/og"
+    content="/api/og?n={name}&s={time}"
   />
 </svelte:head>
 <div>Loading, hang on</div>
