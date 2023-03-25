@@ -22,12 +22,12 @@ type WriteRequest = {
 export const POST: RequestHandler = async ({ request }: RequestEvent) => {
   let body = (await request.json()) as WriteRequest;
   const id = body.id;
-  
-  if (!await(await db.ref(`/ids/${id}`).get()).exists()) {
+
+  if (!(await (await db.ref(`/ids/${id}`).get()).exists())) {
     throw error(401, "unauthorized id");
   }
 
-  const scoreRef = db.ref("/score")
+  const scoreRef = db.ref("/score");
   if (await (await scoreRef.child(id).get()).exists()) {
     throw error(401, "unauthorized id");
   }
@@ -35,15 +35,23 @@ export const POST: RequestHandler = async ({ request }: RequestEvent) => {
   const score = body.score;
   const time = new Date(parseInt(body.date)).setHours(0, 0, 0, 0);
 
-  if((await scoreRef.orderByChild("fingerprint").equalTo(body.fingerprint).get()).exists()){
-    throw error(401, "unauthorized device");
+  let fingerprints = (
+    await scoreRef.orderByChild("fingerprint").equalTo(body.fingerprint).get()
+  ).val() as any[];
+  if (fingerprints != null) {
+    if (
+      Object.values(fingerprints).filter((val) => {
+        return val.time == time;
+      })
+    ) {
+      throw error(401, "unauthorized device");
+    }
   }
-
   db.ref(`/score/${id}`).set({
     name,
     score,
     time,
-    fingerprint:body.fingerprint
+    fingerprint: body.fingerprint,
   });
 
   return new Response(
