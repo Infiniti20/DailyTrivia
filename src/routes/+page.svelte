@@ -75,6 +75,7 @@
         () => Math.random() - 0.5
       );
       gameState.countdown = 10;
+      gameState.questionIndex = questions.length
       endScreen = true;
     }
   });
@@ -131,12 +132,28 @@
     ["20px", "20px 20px 20px 0", "0 20px 20px 20px"],
     ["20px", "20px 20px 20px 0", "0 20px 20px 20px", "0 20px 20px 0"],
   ];
+
+  function handleIndexChange(index: number) {
+    if (questions == undefined) {
+      return;
+    }
+    if (
+      gameState.questionIndex < questions.length &&
+      gameState.questionIndex > -1
+    ) {
+      localStorage.setItem("index", gameState.questionIndex.toString());
+      return;
+    }
+    localStorage.removeItem("index");
+  }
+
+  $: handleIndexChange(gameState.questionIndex);
 </script>
 
 <svelte:window
   on:beforeunload={() => {
     if (
-      gameState.questionIndex <  (questions.length-1) &&
+      gameState.questionIndex < questions.length &&
       gameState.questionIndex > -1
     ) {
       localStorage.setItem("index", gameState.questionIndex.toString());
