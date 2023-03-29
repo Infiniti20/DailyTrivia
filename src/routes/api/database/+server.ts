@@ -38,12 +38,13 @@ export const POST: RequestHandler = async ({ request }: RequestEvent) => {
   let fingerprints = (
     await scoreRef.orderByChild("fingerprint").equalTo(body.fingerprint).get()
   ).val() as any[];
-  console.log(fingerprints)
+  console.log(fingerprints);
+
   if (fingerprints != null) {
     if (
       Object.values(fingerprints).filter((val) => {
         return val.time == time;
-      })
+      }).length
     ) {
       throw error(401, "unauthorized device");
     }

@@ -117,6 +117,7 @@
         }),
       });
       localStorage.setItem("lastCompleted", new Date().getTime().toString());
+      localStorage.removeItem("index")
       localStorage.setItem("lastScore", gameState.totalPoints.toString());
       return;
     }
