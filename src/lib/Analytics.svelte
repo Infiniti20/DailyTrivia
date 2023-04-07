@@ -47,6 +47,7 @@
         {#if score}
           <span class="message">{getMessage(score)}</span>
         {/if}
+        <span class="streak">🔥</span>
         <div class="buttons">
           <button on:click={()=>{leaderboardShown = true}}>Leaderboard</button>
           <button class="icon" on:click={share}>Share</button>
@@ -119,5 +120,23 @@
     font-family: "icomoon";
     margin-left: 10px;
     font-size: 12px;
+  }
+  .streak{
+    font-size: 40px;
+    display: block;
+    margin-bottom: -30px;
+  }
+  .streak::after{
+    content: "26";
+    font-size: 16px;
+    display: block;
+    position: relative;
+    top: -15px;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid rgb(209, 209, 209);
+    color:rgb(110, 110, 110);
+    width: 50px;
+    margin: auto;
   }
 </style>
