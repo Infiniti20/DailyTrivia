@@ -37,7 +37,7 @@
     {#each leaderboardData as person, index}
       <div class="row">
         <span>{index + 1}</span>
-        <span>{person.name}</span>
+        <span class="name">{person.name}</span>
         <span>{person.score}</span>
       </div>
     {/each}
@@ -90,5 +90,11 @@
   .title {
     font-size: 20px;
     text-align: left;
+  }
+  .name {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* width: 5px; */
+    overflow: hidden;
   }
 </style>
