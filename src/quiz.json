@@ -3030,493 +3030,489 @@
     ]
   },
   {
-    "questions": [
+    "questionText": "What were the dolls in the novel \"Valley Of The Dolls\"?",
+    "answers": [
+      { "text": "Pills", "isCorrect": true },
+      { "text": "Seeds", "isCorrect": false },
+      { "text": "Asteroids", "isCorrect": false },
+      { "text": "Soldiers", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Who won the 2002 Academy Award for Best Supporting Actor for playing the role of John Laroche in Adaptation?",
+    "answers": [
+      { "text": "Chris Cooper", "isCorrect": true },
+      { "text": "Ed Harris", "isCorrect": false },
+      { "text": "Paul Newman", "isCorrect": false },
+      { "text": "John C. Reilly", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which surgeon pioneered the use of sterilisation and antiseptic surgery?",
+    "answers": [
+      { "text": "Joseph Lister", "isCorrect": true },
+      { "text": "Michael Faraday", "isCorrect": false },
+      { "text": "Benny Russell", "isCorrect": false },
+      { "text": "Franz Jacob", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "John F. Kennedy Airport in New York used to be called __________.",
+    "answers": [
+      { "text": "Idlewild", "isCorrect": true },
+      { "text": "Smoker", "isCorrect": false },
+      { "text": "Appleton", "isCorrect": false },
+      { "text": "Easydown", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "The country of Laos is on which continent?",
+    "answers": [
+      { "text": "Asia", "isCorrect": true },
+      { "text": "South America", "isCorrect": false },
+      { "text": "Oceania", "isCorrect": false },
+      { "text": "Europe", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Indiana Jones and the Last Crusade was released in which year?",
+    "answers": [
+      { "text": "1989", "isCorrect": true },
+      { "text": "1977", "isCorrect": false },
+      { "text": "1981", "isCorrect": false },
+      { "text": "1985", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "In which book does 'Mr. March' appear?",
+    "answers": [
+      { "text": "Little Women", "isCorrect": true },
+      { "text": "Buddenbrooks", "isCorrect": false },
+      { "text": "David Copperfield", "isCorrect": false },
+      { "text": "Jane Eyre", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Who had a hit in 1993 with No Rain?",
+    "answers": [
+      { "text": "Blind Melon", "isCorrect": true },
+      { "text": "Debby Boone", "isCorrect": false },
+      { "text": "Meredith Brooks", "isCorrect": false },
+      { "text": "Nick Gilder", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Who wrote 'A Brief History of Time'?",
+    "answers": [
+      { "text": "Stephen Hawking", "isCorrect": true },
+      { "text": "Albert Einstein", "isCorrect": false },
+      { "text": "Richard Feynman", "isCorrect": false },
+      { "text": "Charles Darwin", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which country has the largest amount of timezones on its mainland?",
+    "answers": [
+      { "text": "Russia", "isCorrect": true },
+      { "text": "China", "isCorrect": false },
+      { "text": "The USA", "isCorrect": false },
+      { "text": "Australia", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which author wrote 'The Wind-Up Bird Chronicle'?",
+    "answers": [
+      { "text": "Haruki Murakami", "isCorrect": true },
+      { "text": "Oscar Wilde", "isCorrect": false },
+      { "text": "Umberto Eco", "isCorrect": false },
+      { "text": "Søren Kierkegaard", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What is the plot of the movie Ben-Hur?",
+    "answers": [
       {
-        "questionText": "What were the dolls in the novel \"Valley Of The Dolls\"?",
-        "answers": [
-          { "text": "Pills", "isCorrect": true },
-          { "text": "Seeds", "isCorrect": false },
-          { "text": "Asteroids", "isCorrect": false },
-          { "text": "Soldiers", "isCorrect": false }
-        ]
+        "text": "After a prince is betrayed and enslaved, he regains his freedom and comes back for revenge.",
+        "isCorrect": true
       },
       {
-        "questionText": "Who won the 2002 Academy Award for Best Supporting Actor for playing the role of John Laroche in Adaptation?",
-        "answers": [
-          { "text": "Chris Cooper", "isCorrect": true },
-          { "text": "Ed Harris", "isCorrect": false },
-          { "text": "Paul Newman", "isCorrect": false },
-          { "text": "John C. Reilly", "isCorrect": false }
-        ]
+        "text": "A group of thieves feel the pressure from the police when they leave a clue at their latest heist.",
+        "isCorrect": false
       },
       {
-        "questionText": "Which surgeon pioneered the use of sterilisation and antiseptic surgery?",
-        "answers": [
-          { "text": "Joseph Lister", "isCorrect": true },
-          { "text": "Michael Faraday", "isCorrect": false },
-          { "text": "Benny Russell", "isCorrect": false },
-          { "text": "Franz Jacob", "isCorrect": false }
-        ]
+        "text": "A car salesman's inept crime falls apart due to his and his henchmen's bungling.",
+        "isCorrect": false
       },
       {
-        "questionText": "John F. Kennedy Airport in New York used to be called __________.",
-        "answers": [
-          { "text": "Idlewild", "isCorrect": true },
-          { "text": "Smoker", "isCorrect": false },
-          { "text": "Appleton", "isCorrect": false },
-          { "text": "Easydown", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "The country of Laos is on which continent?",
-        "answers": [
-          { "text": "Asia", "isCorrect": true },
-          { "text": "South America", "isCorrect": false },
-          { "text": "Oceania", "isCorrect": false },
-          { "text": "Europe", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "Indiana Jones and the Last Crusade was released in which year?",
-        "answers": [
-          { "text": "1989", "isCorrect": true },
-          { "text": "1977", "isCorrect": false },
-          { "text": "1981", "isCorrect": false },
-          { "text": "1985", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "In which book does 'Mr. March' appear?",
-        "answers": [
-          { "text": "Little Women", "isCorrect": true },
-          { "text": "Buddenbrooks", "isCorrect": false },
-          { "text": "David Copperfield", "isCorrect": false },
-          { "text": "Jane Eyre", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "Who had a hit in 1993 with No Rain?",
-        "answers": [
-          { "text": "Blind Melon", "isCorrect": true },
-          { "text": "Debby Boone", "isCorrect": false },
-          { "text": "Meredith Brooks", "isCorrect": false },
-          { "text": "Nick Gilder", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "Who wrote 'A Brief History of Time'?",
-        "answers": [
-          { "text": "Stephen Hawking", "isCorrect": true },
-          { "text": "Albert Einstein", "isCorrect": false },
-          { "text": "Richard Feynman", "isCorrect": false },
-          { "text": "Charles Darwin", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "Which country has the largest amount of timezones on its mainland?",
-        "answers": [
-          { "text": "Russia", "isCorrect": true },
-          { "text": "China", "isCorrect": false },
-          { "text": "The USA", "isCorrect": false },
-          { "text": "Australia", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "Which author wrote 'The Wind-Up Bird Chronicle'?",
-        "answers": [
-          { "text": "Haruki Murakami", "isCorrect": true },
-          { "text": "Oscar Wilde", "isCorrect": false },
-          { "text": "Umberto Eco", "isCorrect": false },
-          { "text": "Søren Kierkegaard", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "What is the plot of the movie Ben-Hur?",
-        "answers": [
-          {
-            "text": "After a prince is betrayed and enslaved, he regains his freedom and comes back for revenge.",
-            "isCorrect": true
-          },
-          {
-            "text": "A group of thieves feel the pressure from the police when they leave a clue at their latest heist.",
-            "isCorrect": false
-          },
-          {
-            "text": "A car salesman's inept crime falls apart due to his and his henchmen's bungling.",
-            "isCorrect": false
-          },
-          {
-            "text": "After his father goes missing, a professor finds himself in a search for the Holy Grail.",
-            "isCorrect": false
-          }
-        ]
-      },
-      {
-        "questionText": "What word is used in the NATO Phonetic Alphabet for the letter C?",
-        "answers": [
-          { "text": "Charlie", "isCorrect": true },
-          { "text": "Catalog", "isCorrect": false },
-          { "text": "Criminal", "isCorrect": false },
-          { "text": "Cart", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "The painting \"The Flower Carrier\" by Diego Rivera is a part of which art movement?",
-        "answers": [
-          { "text": "Post Impressionism", "isCorrect": true },
-          { "text": "Northern Renaissance", "isCorrect": false },
-          { "text": "Washington Color School", "isCorrect": false },
-          { "text": "High Renaissance", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "Which actress has featured in films including Jurassic Park and Star Wars: Episode VIII – The Last Jedi?",
-        "answers": [
-          { "text": "Laura Dern", "isCorrect": true },
-          { "text": "Frances Fisher", "isCorrect": false },
-          { "text": "Salma Hayek", "isCorrect": false },
-          { "text": "Rachel Weisz", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "What is a baby spider known as?",
-        "answers": [
-          { "text": "A Spiderling", "isCorrect": true },
-          { "text": "A Joey", "isCorrect": false },
-          { "text": "A Leveret", "isCorrect": false },
-          { "text": "A Codling", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "Which film contains the character 'Lt. Col. Bill Kilgore'?",
-        "answers": [
-          { "text": "Apocalypse Now", "isCorrect": true },
-          { "text": "Citizen Kane", "isCorrect": false },
-          {
-            "text": "Austin Powers: International Man of Mystery",
-            "isCorrect": false
-          },
-          { "text": "Pirates of the Caribbean", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "Of What Is A Jenny The Female?",
-        "answers": [
-          { "text": "Donkey", "isCorrect": true },
-          { "text": "Sheep", "isCorrect": false },
-          { "text": "Goat", "isCorrect": false },
-          { "text": "Horse", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "What do the letters 'TLDR' mean on internet chats?",
-        "answers": [
-          { "text": "Too Long Didn't Read", "isCorrect": true },
-          { "text": "Top Level Domain Redirect", "isCorrect": false },
-          { "text": "Tomorrow Let's Damn Remember", "isCorrect": false },
-          { "text": "Trying Little Does Revolutions", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "In Which Year Was The Battle Of Trafalgar Fought?",
-        "answers": [
-          { "text": "1805", "isCorrect": true },
-          { "text": "1863", "isCorrect": false },
-          { "text": "1911", "isCorrect": false },
-          { "text": "1840", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "What are male cows called?",
-        "answers": [
-          { "text": "Bulls", "isCorrect": true },
-          { "text": "Fellas", "isCorrect": false },
-          { "text": "Dogs", "isCorrect": false },
-          { "text": "Blokes", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "Which country's flag fits the description of 'Two equal horizontal bands of red and white.'?",
-        "answers": [
-          { "text": "Indonesia", "isCorrect": true },
-          { "text": "Guatemala", "isCorrect": false },
-          { "text": "Bolivia", "isCorrect": false },
-          { "text": "Kyrgyzstan", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "In which book does 'Elizabeth Bennet' appear?",
-        "answers": [
-          { "text": "Pride and Prejudice", "isCorrect": true },
-          { "text": "The Fault in Our Stars", "isCorrect": false },
-          { "text": "Ship of Fools", "isCorrect": false },
-          { "text": "War and Peace", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "Chicory root is used in a substitute for which drink?",
-        "answers": [
-          { "text": "Coffee ", "isCorrect": true },
-          { "text": "Wine", "isCorrect": false },
-          { "text": "Beer", "isCorrect": false },
-          { "text": "Cola", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "What is the word for a group of elk?",
-        "answers": [
-          { "text": "A gang", "isCorrect": true },
-          { "text": "A watch", "isCorrect": false },
-          { "text": "A muster", "isCorrect": false },
-          { "text": "A bevy", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "Which country altered it's timezone in order to be the first to see in the year 2000?",
-        "answers": [
-          { "text": "Tonga", "isCorrect": true },
-          { "text": "The USA", "isCorrect": false },
-          { "text": "New Zealand", "isCorrect": false },
-          { "text": "North Korea", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "What is the basic unit of currency for San Marino?",
-        "answers": [
-          { "text": "Euro", "isCorrect": true },
-          { "text": "Peso", "isCorrect": false },
-          { "text": "Lira", "isCorrect": false },
-          { "text": "Dollar", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "Who was the author of Frankenstein?",
-        "answers": [
-          { "text": "Mary Shelley", "isCorrect": true },
-          { "text": "Bram Stoker", "isCorrect": false },
-          { "text": "Edgar Allen Poe", "isCorrect": false },
-          { "text": "Jane Austen", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "Which band includes 'Tyler Bates'?",
-        "answers": [
-          { "text": "Marilyn Manson", "isCorrect": true },
-          { "text": "MercyMe", "isCorrect": false },
-          { "text": "Three 6 Mafia", "isCorrect": false },
-          { "text": "The Velvet Underground", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "Which book contains the character 'Gregor Samsa'?",
-        "answers": [
-          { "text": "The Metamorphosis", "isCorrect": true },
-          { "text": "The Sound and the Fury", "isCorrect": false },
-          { "text": "The Quiet American", "isCorrect": false },
-          { "text": "Parade's End", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "Who won the 2012 Academy Award for Best Leading Actress for playing the role of Tiffany in Silver Linings Playbook?",
-        "answers": [
-          { "text": "Jennifer Lawrence", "isCorrect": true },
-          { "text": "Jessica Chastain", "isCorrect": false },
-          { "text": "Emmanuelle Riva", "isCorrect": false },
-          { "text": "Quvenzhané Wallis", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "What is Teleology the study of?",
-        "answers": [
-          { "text": "ends or final causes", "isCorrect": true },
-          { "text": "ticks and mites", "isCorrect": false },
-          { "text": "bryophytes", "isCorrect": false },
-          { "text": "mental processes in living creatures", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "From which part of the world do potatoes originate?",
-        "answers": [
-          { "text": "South America", "isCorrect": true },
-          { "text": "Africa", "isCorrect": false },
-          { "text": "Central Asia", "isCorrect": false },
-          { "text": "India", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "In which book does 'Huckleberry Finn' appear?",
-        "answers": [
-          { "text": "The Adventures of Tom Sawyer", "isCorrect": true },
-          { "text": "Adventures of Huckleberry Finn", "isCorrect": false },
-          { "text": "Kidnapped", "isCorrect": false },
-          { "text": "The Neverending Story", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "Which British musician released the song 'The Man Who Sold the World'?",
-        "answers": [
-          { "text": "David Bowie", "isCorrect": true },
-          { "text": "Eric Clapton", "isCorrect": false },
-          { "text": "Mika", "isCorrect": false },
-          { "text": "Elton John", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "Which of these quotes is from the film 'Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb'?",
-        "answers": [
-          {
-            "text": "\"Gentlemen, you can't fight in here! This is the War Room!\"",
-            "isCorrect": true
-          },
-          {
-            "text": "\"A census taker once tried to test me. I ate his liver with some fava beans and a nice Chianti.\"",
-            "isCorrect": false
-          },
-          { "text": "\"What a dump.\"", "isCorrect": false },
-          {
-            "text": "\"A census taker once tried to test me. I ate his liver with some fava beans and a nice Chianti.\"",
-            "isCorrect": false
-          }
-        ]
-      },
-      {
-        "questionText": "When was the ENIAC, the first programmable computer, created?",
-        "answers": [
-          { "text": "1945", "isCorrect": true },
-          { "text": "1929", "isCorrect": false },
-          { "text": "1960", "isCorrect": false },
-          { "text": "1911", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "With which sport is Andy Murray associated?",
-        "answers": [
-          { "text": "Tennis", "isCorrect": true },
-          { "text": "Badminton", "isCorrect": false },
-          { "text": "Surfing", "isCorrect": false },
-          { "text": "Motor racing", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "Name the movie that matches the following plot summary: 'The lives of mob hitmen, a boxer, a gangster and his wife, and a pair of bandits intertwine in four tales.'",
-        "answers": [
-          { "text": "Pulp Fiction", "isCorrect": true },
-          { "text": "Saving Private Ryan", "isCorrect": false },
-          { "text": "The Treasure of the Sierra Madre", "isCorrect": false },
-          { "text": "Memento", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "In what year was Band-Aid's Do They Know It's Christmas the UK Christmas chart-topping record?",
-        "answers": [
-          { "text": "1984", "isCorrect": true },
-          { "text": "1986", "isCorrect": false },
-          { "text": "1988", "isCorrect": false },
-          { "text": "1990", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "What is the word for a group of giraffes?",
-        "answers": [
-          { "text": "A herd", "isCorrect": true },
-          { "text": "A sloth", "isCorrect": false },
-          { "text": "A skulk", "isCorrect": false },
-          { "text": "A cete", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "Which Album Cover Did Andy Warhol Design For The Rolling Stones?",
-        "answers": [
-          { "text": "Sticky Fingers", "isCorrect": true },
-          { "text": "Brown Sugar", "isCorrect": false },
-          { "text": "The Velvet Underground", "isCorrect": false },
-          { "text": "Let It Bleed", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "A female ferret is known as what?",
-        "answers": [
-          { "text": "A Jill", "isCorrect": true },
-          { "text": "A Jenny", "isCorrect": false },
-          { "text": "A Cow", "isCorrect": false },
-          { "text": "A Soar", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "Which country's flag fits the description of 'Two equal vertical bands of green and white, with a red crescent and star in the center.'?",
-        "answers": [
-          { "text": "Algeria", "isCorrect": true },
-          { "text": "Ghana", "isCorrect": false },
-          { "text": "Belgium", "isCorrect": false },
-          { "text": "Spain", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "What does the flag of Qatar look like?",
-        "answers": [
-          {
-            "text": "Maroon with a white serrated band on the left side.",
-            "isCorrect": true
-          },
-          {
-            "text": "Three equal horizontal bands of green white and red.",
-            "isCorrect": false
-          },
-          {
-            "text": "Three equal vertical bands of black yellow and red.",
-            "isCorrect": false
-          },
-          {
-            "text": "Three vertical bands of blue, yellow, and red.",
-            "isCorrect": false
-          }
-        ]
-      },
-      {
-        "questionText": "Which actor has featured in films including Pulp Fiction and Hairspray?",
-        "answers": [
-          { "text": "John Travolta", "isCorrect": true },
-          { "text": "Ralph Fiennes", "isCorrect": false },
-          { "text": "Brian Cox", "isCorrect": false },
-          { "text": "Michael Douglas", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "What Is The National Airline Of Greece?",
-        "answers": [
-          { "text": "Aegean Airlines", "isCorrect": true },
-          { "text": "Olympus Air", "isCorrect": false },
-          { "text": "Hermes", "isCorrect": false },
-          { "text": "Hellenic Airways", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "Which of these countries borders Senegal?",
-        "answers": [
-          { "text": "Mali", "isCorrect": true },
-          { "text": "Sierra Leone", "isCorrect": false },
-          { "text": "Liberia", "isCorrect": false },
-          { "text": "Cape Verde", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "Which film contains the character 'Hannibal Lecter'?",
-        "answers": [
-          { "text": "The Silence of the Lambs", "isCorrect": true },
-          { "text": "Casablanca", "isCorrect": false },
-          { "text": "A Nightmare on Elm Street", "isCorrect": false },
-          { "text": "Taxi Driver", "isCorrect": false }
-        ]
-      },
-      {
-        "questionText": "Which of these countries borders Germany?",
-        "answers": [
-          { "text": "Luxembourg", "isCorrect": true },
-          { "text": "Liechtenstein", "isCorrect": false },
-          { "text": "Slovenia", "isCorrect": false },
-          { "text": "San Marino", "isCorrect": false }
-        ]
+        "text": "After his father goes missing, a professor finds himself in a search for the Holy Grail.",
+        "isCorrect": false
       }
+    ]
+  },
+  {
+    "questionText": "What word is used in the NATO Phonetic Alphabet for the letter C?",
+    "answers": [
+      { "text": "Charlie", "isCorrect": true },
+      { "text": "Catalog", "isCorrect": false },
+      { "text": "Criminal", "isCorrect": false },
+      { "text": "Cart", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "The painting \"The Flower Carrier\" by Diego Rivera is a part of which art movement?",
+    "answers": [
+      { "text": "Post Impressionism", "isCorrect": true },
+      { "text": "Northern Renaissance", "isCorrect": false },
+      { "text": "Washington Color School", "isCorrect": false },
+      { "text": "High Renaissance", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which actress has featured in films including Jurassic Park and Star Wars: Episode VIII – The Last Jedi?",
+    "answers": [
+      { "text": "Laura Dern", "isCorrect": true },
+      { "text": "Frances Fisher", "isCorrect": false },
+      { "text": "Salma Hayek", "isCorrect": false },
+      { "text": "Rachel Weisz", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What is a baby spider known as?",
+    "answers": [
+      { "text": "A Spiderling", "isCorrect": true },
+      { "text": "A Joey", "isCorrect": false },
+      { "text": "A Leveret", "isCorrect": false },
+      { "text": "A Codling", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which film contains the character 'Lt. Col. Bill Kilgore'?",
+    "answers": [
+      { "text": "Apocalypse Now", "isCorrect": true },
+      { "text": "Citizen Kane", "isCorrect": false },
+      {
+        "text": "Austin Powers: International Man of Mystery",
+        "isCorrect": false
+      },
+      { "text": "Pirates of the Caribbean", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Of What Is A Jenny The Female?",
+    "answers": [
+      { "text": "Donkey", "isCorrect": true },
+      { "text": "Sheep", "isCorrect": false },
+      { "text": "Goat", "isCorrect": false },
+      { "text": "Horse", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What do the letters 'TLDR' mean on internet chats?",
+    "answers": [
+      { "text": "Too Long Didn't Read", "isCorrect": true },
+      { "text": "Top Level Domain Redirect", "isCorrect": false },
+      { "text": "Tomorrow Let's Damn Remember", "isCorrect": false },
+      { "text": "Trying Little Does Revolutions", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "In Which Year Was The Battle Of Trafalgar Fought?",
+    "answers": [
+      { "text": "1805", "isCorrect": true },
+      { "text": "1863", "isCorrect": false },
+      { "text": "1911", "isCorrect": false },
+      { "text": "1840", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What are male cows called?",
+    "answers": [
+      { "text": "Bulls", "isCorrect": true },
+      { "text": "Fellas", "isCorrect": false },
+      { "text": "Dogs", "isCorrect": false },
+      { "text": "Blokes", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which country's flag fits the description of 'Two equal horizontal bands of red and white.'?",
+    "answers": [
+      { "text": "Indonesia", "isCorrect": true },
+      { "text": "Guatemala", "isCorrect": false },
+      { "text": "Bolivia", "isCorrect": false },
+      { "text": "Kyrgyzstan", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "In which book does 'Elizabeth Bennet' appear?",
+    "answers": [
+      { "text": "Pride and Prejudice", "isCorrect": true },
+      { "text": "The Fault in Our Stars", "isCorrect": false },
+      { "text": "Ship of Fools", "isCorrect": false },
+      { "text": "War and Peace", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Chicory root is used in a substitute for which drink?",
+    "answers": [
+      { "text": "Coffee ", "isCorrect": true },
+      { "text": "Wine", "isCorrect": false },
+      { "text": "Beer", "isCorrect": false },
+      { "text": "Cola", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What is the word for a group of elk?",
+    "answers": [
+      { "text": "A gang", "isCorrect": true },
+      { "text": "A watch", "isCorrect": false },
+      { "text": "A muster", "isCorrect": false },
+      { "text": "A bevy", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which country altered it's timezone in order to be the first to see in the year 2000?",
+    "answers": [
+      { "text": "Tonga", "isCorrect": true },
+      { "text": "The USA", "isCorrect": false },
+      { "text": "New Zealand", "isCorrect": false },
+      { "text": "North Korea", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What is the basic unit of currency for San Marino?",
+    "answers": [
+      { "text": "Euro", "isCorrect": true },
+      { "text": "Peso", "isCorrect": false },
+      { "text": "Lira", "isCorrect": false },
+      { "text": "Dollar", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Who was the author of Frankenstein?",
+    "answers": [
+      { "text": "Mary Shelley", "isCorrect": true },
+      { "text": "Bram Stoker", "isCorrect": false },
+      { "text": "Edgar Allen Poe", "isCorrect": false },
+      { "text": "Jane Austen", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which band includes 'Tyler Bates'?",
+    "answers": [
+      { "text": "Marilyn Manson", "isCorrect": true },
+      { "text": "MercyMe", "isCorrect": false },
+      { "text": "Three 6 Mafia", "isCorrect": false },
+      { "text": "The Velvet Underground", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which book contains the character 'Gregor Samsa'?",
+    "answers": [
+      { "text": "The Metamorphosis", "isCorrect": true },
+      { "text": "The Sound and the Fury", "isCorrect": false },
+      { "text": "The Quiet American", "isCorrect": false },
+      { "text": "Parade's End", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Who won the 2012 Academy Award for Best Leading Actress for playing the role of Tiffany in Silver Linings Playbook?",
+    "answers": [
+      { "text": "Jennifer Lawrence", "isCorrect": true },
+      { "text": "Jessica Chastain", "isCorrect": false },
+      { "text": "Emmanuelle Riva", "isCorrect": false },
+      { "text": "Quvenzhané Wallis", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What is Teleology the study of?",
+    "answers": [
+      { "text": "ends or final causes", "isCorrect": true },
+      { "text": "ticks and mites", "isCorrect": false },
+      { "text": "bryophytes", "isCorrect": false },
+      { "text": "mental processes in living creatures", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "From which part of the world do potatoes originate?",
+    "answers": [
+      { "text": "South America", "isCorrect": true },
+      { "text": "Africa", "isCorrect": false },
+      { "text": "Central Asia", "isCorrect": false },
+      { "text": "India", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "In which book does 'Huckleberry Finn' appear?",
+    "answers": [
+      { "text": "The Adventures of Tom Sawyer", "isCorrect": true },
+      { "text": "Adventures of Huckleberry Finn", "isCorrect": false },
+      { "text": "Kidnapped", "isCorrect": false },
+      { "text": "The Neverending Story", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which British musician released the song 'The Man Who Sold the World'?",
+    "answers": [
+      { "text": "David Bowie", "isCorrect": true },
+      { "text": "Eric Clapton", "isCorrect": false },
+      { "text": "Mika", "isCorrect": false },
+      { "text": "Elton John", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which of these quotes is from the film 'Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb'?",
+    "answers": [
+      {
+        "text": "\"Gentlemen, you can't fight in here! This is the War Room!\"",
+        "isCorrect": true
+      },
+      {
+        "text": "\"A census taker once tried to test me. I ate his liver with some fava beans and a nice Chianti.\"",
+        "isCorrect": false
+      },
+      { "text": "\"What a dump.\"", "isCorrect": false },
+      {
+        "text": "\"A census taker once tried to test me. I ate his liver with some fava beans and a nice Chianti.\"",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "questionText": "When was the ENIAC, the first programmable computer, created?",
+    "answers": [
+      { "text": "1945", "isCorrect": true },
+      { "text": "1929", "isCorrect": false },
+      { "text": "1960", "isCorrect": false },
+      { "text": "1911", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "With which sport is Andy Murray associated?",
+    "answers": [
+      { "text": "Tennis", "isCorrect": true },
+      { "text": "Badminton", "isCorrect": false },
+      { "text": "Surfing", "isCorrect": false },
+      { "text": "Motor racing", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Name the movie that matches the following plot summary: 'The lives of mob hitmen, a boxer, a gangster and his wife, and a pair of bandits intertwine in four tales.'",
+    "answers": [
+      { "text": "Pulp Fiction", "isCorrect": true },
+      { "text": "Saving Private Ryan", "isCorrect": false },
+      { "text": "The Treasure of the Sierra Madre", "isCorrect": false },
+      { "text": "Memento", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "In what year was Band-Aid's Do They Know It's Christmas the UK Christmas chart-topping record?",
+    "answers": [
+      { "text": "1984", "isCorrect": true },
+      { "text": "1986", "isCorrect": false },
+      { "text": "1988", "isCorrect": false },
+      { "text": "1990", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What is the word for a group of giraffes?",
+    "answers": [
+      { "text": "A herd", "isCorrect": true },
+      { "text": "A sloth", "isCorrect": false },
+      { "text": "A skulk", "isCorrect": false },
+      { "text": "A cete", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which Album Cover Did Andy Warhol Design For The Rolling Stones?",
+    "answers": [
+      { "text": "Sticky Fingers", "isCorrect": true },
+      { "text": "Brown Sugar", "isCorrect": false },
+      { "text": "The Velvet Underground", "isCorrect": false },
+      { "text": "Let It Bleed", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "A female ferret is known as what?",
+    "answers": [
+      { "text": "A Jill", "isCorrect": true },
+      { "text": "A Jenny", "isCorrect": false },
+      { "text": "A Cow", "isCorrect": false },
+      { "text": "A Soar", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which country's flag fits the description of 'Two equal vertical bands of green and white, with a red crescent and star in the center.'?",
+    "answers": [
+      { "text": "Algeria", "isCorrect": true },
+      { "text": "Ghana", "isCorrect": false },
+      { "text": "Belgium", "isCorrect": false },
+      { "text": "Spain", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What does the flag of Qatar look like?",
+    "answers": [
+      {
+        "text": "Maroon with a white serrated band on the left side.",
+        "isCorrect": true
+      },
+      {
+        "text": "Three equal horizontal bands of green white and red.",
+        "isCorrect": false
+      },
+      {
+        "text": "Three equal vertical bands of black yellow and red.",
+        "isCorrect": false
+      },
+      {
+        "text": "Three vertical bands of blue, yellow, and red.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "questionText": "Which actor has featured in films including Pulp Fiction and Hairspray?",
+    "answers": [
+      { "text": "John Travolta", "isCorrect": true },
+      { "text": "Ralph Fiennes", "isCorrect": false },
+      { "text": "Brian Cox", "isCorrect": false },
+      { "text": "Michael Douglas", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What Is The National Airline Of Greece?",
+    "answers": [
+      { "text": "Aegean Airlines", "isCorrect": true },
+      { "text": "Olympus Air", "isCorrect": false },
+      { "text": "Hermes", "isCorrect": false },
+      { "text": "Hellenic Airways", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which of these countries borders Senegal?",
+    "answers": [
+      { "text": "Mali", "isCorrect": true },
+      { "text": "Sierra Leone", "isCorrect": false },
+      { "text": "Liberia", "isCorrect": false },
+      { "text": "Cape Verde", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which film contains the character 'Hannibal Lecter'?",
+    "answers": [
+      { "text": "The Silence of the Lambs", "isCorrect": true },
+      { "text": "Casablanca", "isCorrect": false },
+      { "text": "A Nightmare on Elm Street", "isCorrect": false },
+      { "text": "Taxi Driver", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which of these countries borders Germany?",
+    "answers": [
+      { "text": "Luxembourg", "isCorrect": true },
+      { "text": "Liechtenstein", "isCorrect": false },
+      { "text": "Slovenia", "isCorrect": false },
+      { "text": "San Marino", "isCorrect": false }
     ]
   },
   {
