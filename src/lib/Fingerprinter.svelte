@@ -1,5 +1,6 @@
 <script lang="ts">
   export let fingerprint;
+  export let ip: string;
   function getFingerprint(): number {
     function createFingerprint(string: string) {
       var hash = 0,
@@ -66,7 +67,9 @@
         "_" +
         graphics_card +
         "_" +
-        dataURL
+        dataURL +
+        "_" +
+        ip
     );
   }
 

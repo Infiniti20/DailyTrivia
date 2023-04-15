@@ -148,6 +148,7 @@
   }
 
   $: handleIndexChange(gameState.questionIndex);
+    console.log(data.ip)
 </script>
 
 <svelte:window
@@ -162,7 +163,7 @@
     localStorage.removeItem("index");
   }}
 />
-<Fingerprinter bind:fingerprint />
+<Fingerprinter bind:fingerprint ip={data.ip} />
 {#if gameState?.hasStarted ?? false}
   {#if gameState.answers}
     <div class="main">

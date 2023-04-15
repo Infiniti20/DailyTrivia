@@ -1,9 +1,10 @@
+import { get } from 'svelte/store';
 
 
 
 export const ssr = false;
 
-export function load({ fetch, params }) {
+export function load({ fetch, params, getClientAddress }) {
   let id = Buffer.from((Math.random()).toString()).toString("base64");
   fetch("/api/database", {
     method: "PUT",
@@ -11,7 +12,8 @@ export function load({ fetch, params }) {
       id,
     }),
   });
+  let ip = getClientAddress()
   return {
-    id,
+    id,ip
   };
 }
