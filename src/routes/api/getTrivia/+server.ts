@@ -11,6 +11,26 @@ function mulberry32(a: number) {
   };
 }
 
+function shuffle(array: any[], generator: Function) {
+  // <-- ADDED ARGUMENT
+  var m = array.length,
+    t,
+    i;
+
+  // While there remain elements to shuffle…
+  while (m) {
+    // Pick a remaining element…
+    i = Math.floor(generator() * m--); // <-- MODIFIED LINE
+
+    // And swap it with the current element.
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+
+  return array;
+}
+
 function cyrb128(str: string) {
   let h1 = 1779033703,
     h2 = 3144134277,
@@ -36,21 +56,37 @@ function cyrb128(str: string) {
 }
 //TODO: FIX RANDOMNESS TO BE MORE RANDOM
 function generateQuestions(dayOffset: string) {
-  let seeds = cyrb128("012345678");
-  let mulberry = mulberry32(seeds[0]);
+  let seeds = cyrb128("KWIZZY29");
+  let mulberry = mulberry32(seeds[0]+seeds[1]);
   let days = parseInt(dayOffset);
   for (let i = 0; i < (days - 1) * 5; i++) {
     mulberry();
   }
   let questions = [];
-  for (let i = 0; i < 5; i++) {
+
+  for (let i = 0; i < 2; i++) {
     let question =
       quizData[
-      transformRange(mulberry(), { min: 0, max: 1 }, { min: 0, max: 300 })
-    ];
+        transformRange(mulberry(), { min: 0, max: 1 }, { min: 0, max: 999 })
+      ];
     questions.push(question);
   }
 
+  for (let i = 0; i < 2; i++) {
+    let question =
+      quizData[
+        transformRange(mulberry(), { min: 0, max: 1 }, { min: 1000, max: 1999 })
+      ];
+    questions.push(question);
+  }
+
+  let question =
+    quizData[
+      transformRange(mulberry(), { min: 0, max: 1 }, { min: 2000, max: 2999 })
+    ];
+  questions.push(question);
+  
+  shuffle(questions, mulberry)
   return questions;
 }
 
@@ -100,3 +136,13 @@ export const GET: RequestHandler = async ({
     })
   );
 };
+
+// function checkValidity(min:number, max:number){
+//   let questions:any[] = []
+//   for(let i=min;i<max+1;i++){
+//     let newQ = generateQuestions((i+1).toString())
+//     questions = [...questions, ...newQ]
+//   }
+//   console.log(questions.length, new Set(questions).size);
+// }
+
