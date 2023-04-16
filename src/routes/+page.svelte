@@ -147,6 +147,13 @@
     localStorage.removeItem("index");
   }
 
+  function parseHtmlEntities(str:string) {
+    return str.replace(/&#([0-9]{1,3});/gi, function(match, numStr:string) {
+        var num = parseInt(numStr, 10); // read num as normal number
+        return String.fromCharCode(num);
+    });
+}
+
   $: handleIndexChange(gameState.questionIndex);
     console.log(data.ip)
 </script>
@@ -172,7 +179,7 @@
         {handleNext}
         {handleAnalytics}
       />
-      <h1>{gameState.question}</h1>
+      <h1>{parseHtmlEntities(gameState.question)}</h1>
       <div class="answer-container">
         {#each gameState.answers as answer, index}
           <AnswerButton
