@@ -197,6 +197,7 @@
   h1 {
     text-align: center;
     margin: 15px;
+    font-size: 7cqw;
   }
 
   .main {
