@@ -31,8 +31,8 @@
   function share() {
     navigator.share({
       url: `/share?t=${score}&n=${name ?? (localStorage.getItem("name") ?? "I")}`,
-      title: "Daily Trivia",
-      text: `I completed Daily Trivia with ${score} points`,
+      title: "Kwizzy",
+      text: `I completed Kwizzy with ${score} points`,
     });
   }
 </script>
@@ -47,6 +47,7 @@
         {#if score}
           <span class="message">{getMessage(score)}</span>
         {/if}
+        <!-- <span>Streak: 🔥5</span> -->
         <div class="buttons">
           <button on:click={()=>{leaderboardShown = true}}>Leaderboard</button>
           <button class="icon" on:click={share}>Share</button>
