@@ -1,8 +1,6 @@
 import type { RequestEvent, RequestHandler } from "@sveltejs/kit";
 import quizData from "../../../quiz.json";
 import type { Answer } from "../../../types";
-import { FSWatcher } from "vite";
-import { writeFileSync } from "fs";
 function mulberry32(a: number) {
   return function () {
     var t = (a += 0x6d2b79f5);
@@ -57,35 +55,27 @@ function cyrb128(str: string) {
 }
 //TODO: FIX RANDOMNESS TO BE MORE RANDOM
 function generateQuestions(dayOffset: string) {
-  let seeds = cyrb128("KWIZZY29"+dayOffset);
+  let seeds = cyrb128("KWIZZY29" + dayOffset);
   let mulberry = mulberry32(seeds[0] + seeds[1] + seeds[2]);
   let days = parseInt(dayOffset);
   // for (let i = 0; i < (days - 1) * 5; i++) {
   //   mulberry();
   // }
   let questions = [];
-  let easy = trueShuffle(mulberry, quizData.slice(0, 799));
-  let medium = trueShuffle(mulberry, quizData.slice(800, 1599));
-  let hard = trueShuffle(mulberry, quizData.slice(1600, 2399));
-  
-  questions.push(easy[0])
-  questions.push(easy[1]);
-  questions.push(medium[0])
-    questions.push(medium[1]);
-    questions.push(hard[0])
+  let easy: number[] = [0 + days, 400 + days];
+  let medium: number[] = [799 + days, 1200 + days];
+  let hard: number = 1599 + days;
 
-
+  questions.push(quizData[easy[0]]);
+  questions.push(quizData[easy[1]]);
+  questions.push(quizData[medium[0]]);
+  questions.push(quizData[medium[1]]);
+  questions.push(quizData[hard]);
 
   shuffle(questions, mulberry);
   return questions;
 }
-function trueShuffle(rand, arr){
-    let shuff = arr.reduce(
-      ([a, b]) => (b.push(...a.splice((rand() * a.length) | 0, 1)), [a, b]),
-      [[...arr], []]
-    )[1];
-    return shuff
-}
+
 // function transformRange(
 //   value: number,
 //   r1: { min: number; max: number },
@@ -126,7 +116,6 @@ export const GET: RequestHandler = async ({
   //       : "invalid"
   //   }`
   // );
-checkValidity(31,99)
   return new Response(
     JSON.stringify({
       questions,
