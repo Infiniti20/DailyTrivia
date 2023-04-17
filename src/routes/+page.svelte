@@ -148,13 +148,11 @@
   }
 
   function parseHtmlEntities(str:string) {
-    let newstr = str.replace(/&#([0-9]{1,3});/gi, function(match, numStr:string) {
-        var num = parseInt(numStr, 10); // read num as normal number
-        return String.fromCharCode(num);
-    });
-    return newstr.replace("&quot;","\"")
-}
-
+    var txt = document.createElement("textarea");
+    txt.innerHTML = str;
+    return txt.value;
+  }
+  
   $: handleIndexChange(gameState.questionIndex);
     console.log(data.ip)
 </script>
