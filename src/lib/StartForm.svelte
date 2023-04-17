@@ -14,6 +14,9 @@
 </script>
 
 <div class="form">
+  <div class="nav">
+    <img src="/Kwizzy.png" alt="" class="image">
+  </div>
   <form
     on:submit|preventDefault={() => {
       if (nameBind) {
@@ -38,12 +41,22 @@
 </div>
 
 <style>
+  .nav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .image{
+    width:150px;
+    aspect-ratio:  993 / 306;
+  }
   .form {
     display: grid;
     height: 100%;
     width: 100%;
     justify-content: center;
     align-items: center;
+    grid-template-rows: 12fr 99fr;
   }
   input,
   button {
