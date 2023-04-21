@@ -62,28 +62,35 @@ function generateQuestions(dayOffset: string) {
   //   mulberry();
   // }
   let questions = [];
-  let easy: number[] = [0 + days, 400 + days];
-  let medium: number[] = [799 + days, 1200 + days];
-  let hard: number = 1599 + days;
+  for(let i=5*days;i<5*days+5;i++){
+    questions.push(quizData[num_to_code(i)])
+  }
 
-  questions.push(quizData[easy[0]]);
-  questions.push(quizData[easy[1]]);
-  questions.push(quizData[medium[0]]);
-  questions.push(quizData[medium[1]]);
-  questions.push(quizData[hard]);
 
   shuffle(questions, mulberry);
   return questions;
 }
 
-// function transformRange(
-//   value: number,
-//   r1: { min: number; max: number },
-//   r2: { min: number; max: number }
-// ) {
-//   let scale = (r2.max - r2.min) / (r1.max - r1.min);
-//   return Math.trunc((value - r1.min) * scale);
-// }
+function num_to_code(n: number): number {
+  let string: number = 0;
+  let hashed: number = hash_number(n);
+  const charnumber: number = hashed % 2400;
+  hashed = Math.floor(hashed / 2400);
+  string = charnumber;
+  return string;
+}
+
+function hash_number(n: number, rounds: number = 1): number {
+  const prime_number: number = 60466181;
+
+  if (rounds <= 0) {
+    return n;
+  }
+  const hashed: number = (n * prime_number) % (2400 ** 5);
+  return hash_number(hashed, rounds - 1);
+}
+
+let num: number = 1;
 
 // function findCommonElements3(arr1: any[], arr2: any[]) {
 //   return arr1.some((item) => arr2.includes(item));
