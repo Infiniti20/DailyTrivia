@@ -14,17 +14,20 @@
 </script>
 
 <svelte:head>
-  <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kwizzy.me">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kwizzy - Daily Trivia">
+  <meta property="og:description" content="5 new trivia questions everyday! Compete with all your friends to see who can get the highest score!">
+  <meta property="og:image" content="/api/og?n={name}&s={time}">
 
-  <meta property="og:url" content="/" />
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="kwizzy.me">
+  <meta property="twitter:url" content="https://kwizzy.me">
+  <meta name="twitter:title" content="Kwizzy - Daily Trivia">
+  <meta name="twitter:description" content="5 new trivia questions everyday! Compete with all your friends to see who can get the highest score!">
+  <meta name="twitter:image" content="/api/og?n={name}&s={time}">
 
-  <meta property="og:title" content="DailyTrivia" />
 
-  <meta property="og:description" content="It's in the name" />
-
-  <meta
-    property="og:image"
-    content="/api/og?n={name}&s={time}"
-  />
 </svelte:head>
 <div>Loading, hang on</div>
