@@ -2,11 +2,18 @@
 
     export let name:string = "I"
     export let score:number = 100
+    const scoreString = score.toString().split("")
+      let theme: string[] = ["#1368ce", "#e21b3c", "#ffa602", "#26890c"];
+
 </script>
 
 <div>
   {name} scored
-    <h1>{score}</h1>
+    <h1>
+      {#each scoreString as letter,i }
+        <span style="color:{theme[i]}">{letter}</span>
+      {/each}
+    </h1>
     on DailyTrivia
 </div>
 
@@ -14,12 +21,12 @@
   div{
     display: flex;
     flex-direction: column;
-    background-color: #1368ce;
+    background-color: white;
     width:100%;
     height:100%;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #333333;
     font-size:60px;
   }
   h1{
