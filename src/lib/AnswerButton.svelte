@@ -77,6 +77,7 @@ $: handleAnswerChange(hasAnswered)
     font-size: 20px;
     width: calc(50vw - 30px);
     height: calc(100% - 40px);
+    min-height: calc(100% - 40px);
     /* overflow-wrap: anywhere; */
     /* margin: 10px; */
     border-radius: 5px;
@@ -88,7 +89,9 @@ $: handleAnswerChange(hasAnswered)
   span {
     font-weight: bold;
     /* font-size: 1vw; */
-    font-size: min(calc((50vw - 30px) / 10), 40px);
+    display: inline-block;
+    line-height: 1.1;
+    font-size: min(calc((20vh - 30px) / 10), 40px);
   }
 
   @keyframes loading {

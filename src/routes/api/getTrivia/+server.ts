@@ -111,7 +111,7 @@ export const GET: RequestHandler = async ({
       })
     );
   }
-  let questions = generateQuestions((parseInt(dayOffset) + 1).toString());
+  let questions = generateQuestions((parseInt(dayOffset)).toString());
   // let questionNext = generateQuestions((parseInt(dayOffset) + 2).toString());
 
   // console.log(
