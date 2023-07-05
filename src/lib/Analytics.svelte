@@ -147,7 +147,7 @@
     grid-template-rows: 1fr 0.5fr;
   }
   .stat {
-    font-size: 36px;
+    font-size: 24px;
     font-weight: 400;
     display: flex;
     align-items: center;
