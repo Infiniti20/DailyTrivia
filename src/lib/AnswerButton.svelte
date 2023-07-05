@@ -91,7 +91,7 @@ $: handleAnswerChange(hasAnswered)
     /* font-size: 1vw; */
     display: inline-block;
     line-height: 1.1;
-    font-size: min(calc((20vh - 30px) / 10), 40px);
+    font-size: min(calc((22vh - 30px) / 10), 40px);
   }
 
   @keyframes loading {
