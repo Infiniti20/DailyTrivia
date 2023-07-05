@@ -118,7 +118,7 @@
   .buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 15px;
+    margin-top: 20px;
   }
   .stats-container{
     margin-top: 10px;
