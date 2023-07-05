@@ -3,8 +3,8 @@ import { Resvg } from "@resvg/resvg-js";
 import type { RequestEvent, RequestHandler } from "@sveltejs/kit";
 import Anton from "/static/fonts/Anton-Regular.ttf";
 
-const height = 400;
-const width = 800;
+const height = 600;
+const width = 1200;
 import { html as toReactNode } from "satori-html";
 import Card from "../../../lib/OG.svelte"
 
