@@ -1,12 +1,13 @@
 <script lang="ts">
+  import { get_binding_group_value } from "svelte/internal";
   import Leaderboard from "./Leaderboard.svelte";
 
   export let score: number | undefined;
   export let endScreen: boolean;
   export let name: string;
 
-  export let leaderboardShown:boolean = false;
-  export let handleBack:any = undefined;
+  export let leaderboardShown: boolean = false;
+  export let handleBack: any = undefined;
   //! UPDATE THIS TO HAVE MULTIPLE MESSAGES
   let messageRange = [
     "Maybe trivia isn't your thing.",
@@ -30,7 +31,7 @@
 
   function share() {
     navigator.share({
-      url: `/share?t=${score}&n=${name ?? (localStorage.getItem("name") ?? "I")}`,
+      url: `/share?t=${score}&n=${name ?? localStorage.getItem("name") ?? "I"}`,
       title: "Kwizzy",
       text: `I completed Kwizzy with ${score} points`,
     });
@@ -40,22 +41,39 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="bg" on:click|self={hideEndScreen}>
   <!-- {#if !wasButton} -->
-    <span class="modal">
-      {#if !leaderboardShown}
-        <span class="intro">You got</span>
-        <h1>{score ?? "-"}</h1>
-        {#if score}
-          <span class="message">{getMessage(score)}</span>
-        {/if}
-        <!-- <span>Streak: 🔥5</span> -->
-        <div class="buttons">
-          <button on:click={()=>{leaderboardShown = true}}>Leaderboard</button>
-          <button class="icon" on:click={share}>Share</button>
-        </div>
-      {:else}
-        <Leaderboard bind:leaderboardShown {handleBack}/>
+  <span class="modal">
+    {#if !leaderboardShown}
+      <span class="intro">You got</span>
+      <h1>{score ?? "-"}</h1>
+      {#if score}
+        <span class="message">{getMessage(score)}</span>
       {/if}
-    </span>
+      <div class="stats-container">
+        <b>Statistics</b>
+        <div class="stats">
+          <span class="stat">{localStorage.getItem("s")}</span>
+          <span class="stat"
+            >{parseInt(localStorage.getItem("c") ?? score?.toString() ?? "0") /
+              parseInt(localStorage.getItem("g") ?? "1")}</span
+          >
+          <span class="stat">{localStorage.getItem("g")}</span>
+          <span class="label">Streak</span>
+          <span class="label">Avg. Score</span>
+          <span class="label">Played</span>
+        </div>
+      </div>
+      <div class="buttons">
+        <button
+          on:click={() => {
+            leaderboardShown = true;
+          }}>Leaderboard</button
+        >
+        <button class="icon" on:click={share}>Share</button>
+      </div>
+    {:else}
+      <Leaderboard bind:leaderboardShown {handleBack} />
+    {/if}
+  </span>
   <!-- {:else}
     <span class="modal" /> -->
   <!-- {/if} -->
@@ -100,9 +118,11 @@
   .buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 20px;
+    margin-top: 15px;
   }
-
+  .stats-container{
+    margin-top: 10px;
+  }
   button {
     cursor: pointer;
     background-color: #333333;
@@ -121,4 +141,28 @@
     margin-left: 10px;
     font-size: 12px;
   }
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 0.5fr;
+  }
+  .stat {
+    font-size: 36px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .label {
+    font-size: 12px;
+    padding: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-weight: 400;
+  }
+  .stat:nth-child(1)::before {
+    content: '🔥';
+    font-size:16px;
+  }
+
 </style>

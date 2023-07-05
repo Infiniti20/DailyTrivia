@@ -47,6 +47,7 @@
   }
   onMount(async () => {
     let offset = calculateDays(new Date("3/17/2023"), new Date());
+
     questions = (
       await (await fetch(`/api/getTrivia?offset=${offset + 1}`)).json()
     ).questions;
@@ -57,6 +58,7 @@
           new Date("1965").getTime().toString()
       )
     );
+
     date1.setHours(0, 0, 0, 0);
     let days = calculateDays(date1, date2);
     console.log(days);
@@ -75,8 +77,10 @@
         () => Math.random() - 0.5
       );
       gameState.countdown = 10;
-      gameState.questionIndex = questions.length
+      gameState.questionIndex = questions.length;
       endScreen = true;
+    } else if(days > 2){
+      localStorage.setItem("s", "0")
     }
   });
 
@@ -117,6 +121,17 @@
       localStorage.setItem("lastCompleted", new Date().getTime().toString());
       localStorage.removeItem("index");
       localStorage.setItem("lastScore", gameState.totalPoints.toString());
+
+      let gamesPlayed = (
+        parseInt(localStorage.getItem("g") ?? "0") + 1
+      ).toString();
+      let cumulativeScore = (
+        parseInt(localStorage.getItem("c") ?? "0") + gameState.totalPoints
+      ).toString();
+      let streak = (parseInt(localStorage.getItem("s") ?? "0") + 1).toString();
+      localStorage.setItem("g", gamesPlayed);
+      localStorage.setItem("c", cumulativeScore);
+      localStorage.setItem("s", streak);
       return;
     }
     gameState.hasAnswered = false;
@@ -147,14 +162,14 @@
     localStorage.removeItem("index");
   }
 
-  function parseHtmlEntities(str:string) {
+  function parseHtmlEntities(str: string) {
     var txt = document.createElement("textarea");
     txt.innerHTML = str;
     return txt.value;
   }
-  
+
   $: handleIndexChange(gameState.questionIndex);
-    console.log(data.ip)
+  console.log(data.ip);
 </script>
 
 <svelte:window
