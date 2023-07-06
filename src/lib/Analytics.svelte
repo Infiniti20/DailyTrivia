@@ -53,8 +53,8 @@
         <div class="stats">
           <span class="stat">{localStorage.getItem("s")}</span>
           <span class="stat"
-            >{parseInt(localStorage.getItem("c") ?? score?.toString() ?? "0") /
-              parseInt(localStorage.getItem("g") ?? "1")}</span
+            >{(parseInt(localStorage.getItem("c") ?? score?.toString() ?? "0") /
+              parseInt(localStorage.getItem("g") ?? "1")).toFixed(1)}</span
           >
           <span class="stat">{localStorage.getItem("g")}</span>
           <span class="label">Streak</span>
