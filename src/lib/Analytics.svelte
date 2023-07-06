@@ -71,7 +71,7 @@
         <button class="icon" on:click={share}>Share</button>
       </div>
     {:else}
-      <Leaderboard bind:leaderboardShown {handleBack} />
+      <Leaderboard bind:leaderboardShown {handleBack} {name} />
     {/if}
   </span>
   <!-- {:else}

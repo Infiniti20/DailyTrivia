@@ -1,5 +1,6 @@
 <script lang="ts">
   export let leaderboardShown;
+  export let name: string;
   export let handleBack = () => {
     leaderboardShown = false;
   };
@@ -30,12 +31,11 @@
   <div class="grid">
     <div class="row no-border">
       <span><b>Rank</b></span>
-
       <span><b>Name</b></span>
       <span><b>Score</b></span>
     </div>
     {#each leaderboardData as person, index}
-      <div class="row">
+      <div class="row {name == person.name ? 'highlighted' : ''}">
         <span>{index + 1}</span>
         <span class="name">{person.name}</span>
         <span>{person.score}</span>
@@ -96,5 +96,10 @@
     white-space: nowrap;
     /* width: 5px; */
     overflow: hidden;
+  }
+  .highlighted {
+    border-radius: 5px;
+    color: white;
+    background: #333333;
   }
 </style>
