@@ -14,7 +14,7 @@
         <span style="color:{theme[i]}">{letter}</span>
       {/each}
     </h1>
-    on DailyTrivia
+    on Kwizzy
 </div>
 
 <style>
