@@ -22,6 +22,7 @@
   let promise = getLeaderBoard();
   let dateSplit = new Date().toDateString().split(" ");
   let date = [dateSplit[0], dateSplit[1] + " " + dateSplit[2]].join(", ");
+  
 </script>
 
 {#await promise}

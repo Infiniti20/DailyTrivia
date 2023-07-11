@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { get_binding_group_value } from "svelte/internal";
+  import { onMount } from "svelte";
   import Leaderboard from "./Leaderboard.svelte";
 
   export let score: number | undefined;
@@ -21,6 +21,25 @@
     "Are you hacking?",
   ];
 
+  const publicVapidKey =
+    "BB40OXsyn_woNLPWvkhcU04nwJba3O588wqeH-jXzTc4oiiqBLGVlrIOj4treMoHaviNdeIS4CWdVBZRaf4ZwXY";
+
+  // Copied from the web-push documentation
+  const urlBase64ToUint8Array = (base64String: string) => {
+    const padding = "=".repeat((4 - (base64String.length % 4)) % 4);
+    const base64 = (base64String + padding)
+      .replace(/\-/g, "+")
+      .replace(/_/g, "/");
+
+    const rawData = window.atob(base64);
+    const outputArray = new Uint8Array(rawData.length);
+
+    for (let i = 0; i < rawData.length; ++i) {
+      outputArray[i] = rawData.charCodeAt(i);
+    }
+    return outputArray;
+  };
+
   function getMessage(score: number) {
     return messageRange[Math.trunc(score / (5000 / (messageRange.length - 1)))];
   }
@@ -36,6 +55,28 @@
       text: `I completed Kwizzy with ${score} points`,
     });
   }
+  onMount(async () => {
+    if(localStorage.getItem("sub") == "1"){return}
+    let status = Notification.permission;
+    if (status !== "granted") {
+      status = await Notification.requestPermission();
+    }
+    if (status == "granted") {
+      if (!("serviceWorker" in navigator)) return;
+
+      // Subscribe to push notifications
+      const reg = await navigator.serviceWorker.ready;
+      let sub = await reg.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey: urlBase64ToUint8Array(publicVapidKey),
+      });
+      fetch("/api/notifications/add", {
+        method: "POST",
+        body: JSON.stringify(sub),
+      });
+      localStorage.setItem("sub", "1")
+    }
+  });
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -53,8 +94,10 @@
         <div class="stats">
           <span class="stat">{localStorage.getItem("s")}</span>
           <span class="stat"
-            >{(parseInt(localStorage.getItem("c") ?? score?.toString() ?? "0") /
-              parseInt(localStorage.getItem("g") ?? "1")).toFixed(1)}</span
+            >{(
+              parseInt(localStorage.getItem("c") ?? score?.toString() ?? "0") /
+              parseInt(localStorage.getItem("g") ?? "1")
+            ).toFixed(1)}</span
           >
           <span class="stat">{localStorage.getItem("g")}</span>
           <span class="label">Streak</span>
@@ -71,7 +114,11 @@
         <button class="icon" on:click={share}>Share</button>
       </div>
     {:else}
-      <Leaderboard bind:leaderboardShown {handleBack} name={name ?? localStorage.getItem("name")} />
+      <Leaderboard
+        bind:leaderboardShown
+        {handleBack}
+        name={name ?? localStorage.getItem("name")}
+      />
     {/if}
   </span>
   <!-- {:else}
@@ -120,7 +167,7 @@
     grid-template-columns: 1fr 1fr;
     margin-top: 20px;
   }
-  .stats-container{
+  .stats-container {
     margin-top: 10px;
   }
   button {
@@ -143,7 +190,7 @@
   }
   .stats {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 0.5fr;
   }
   .stat {
@@ -161,8 +208,7 @@
     font-weight: 400;
   }
   .stat:nth-child(1)::before {
-    content: '🔥';
-    font-size:16px;
+    content: "🔥";
+    font-size: 16px;
   }
-
 </style>

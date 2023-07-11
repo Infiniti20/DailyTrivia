@@ -79,8 +79,8 @@
       gameState.countdown = 10;
       gameState.questionIndex = questions.length;
       endScreen = true;
-    } else if(days > 2){
-      localStorage.setItem("s", "0")
+    } else if (days > 2) {
+      localStorage.setItem("s", "0");
     }
   });
 
